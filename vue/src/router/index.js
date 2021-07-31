@@ -5,6 +5,8 @@ import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
 import Register from '../views/Register.vue'
 import store from '../store/index'
+import Breweries from '../views/Breweries.vue'
+import BreweryDetail from '../views/BreweryDetail.vue'
 
 Vue.use(Router)
 
@@ -53,6 +55,22 @@ const router = new Router({
         requiresAuth: false
       }
     },
+    {
+      path: "/breweries",
+      name: "breweries",
+      component: Breweries,
+      meta: {
+        requiresAuth: false
+      }
+    },
+    {
+      path: '/breweries/:breweryID',
+      name: 'breweries-detail',
+      component: BreweryDetail,
+      meta: {
+        requiresAuth: false
+      }
+    }
   ]
 })
 

@@ -74,3 +74,12 @@ export default {
   }
 };
 </script>
+
+<style>
+
+label {
+  display: flex;
+  padding-top: 50px;
+}
+
+</style>
