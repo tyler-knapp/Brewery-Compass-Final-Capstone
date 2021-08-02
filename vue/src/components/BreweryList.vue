@@ -1,9 +1,11 @@
 <template>
   <div>
     <brewery-card
-      v-for="brewery in breweries"
+      v-for="brewery in display"
       v-bind:key="brewery.id"
-      v-bind:brewery="brewery" />
+      v-bind:brewery="brewery"
+      v-bind:style="{ 'background-color':randomBackgroundColor() }"
+    />
   </div>
 </template>
 
@@ -15,10 +17,10 @@ export default {
   components: {
     BreweryCard,
   },
-  data() {
-      return {
-          breweries: this.$store.state.breweries
-      }
+  computed: {
+    display() {
+      return this.$store.state.breweries;
+    }
   },
   methods: {
     getAllBreweries() {
@@ -43,6 +45,14 @@ export default {
             console.error("Unexpected Axios error");
           }
         });
+    },
+    randomBackgroundColor() {
+      return "#" + this.generateHexCode();
+    },
+    generateHexCode() {
+      var bg = Math.floor(Math.random() * 16777215).toString(16);
+      if (bg.length !== 6) bg = this.generateHexCode();
+      return bg;
     },
   },
   created() {
