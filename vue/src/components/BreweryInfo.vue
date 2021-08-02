@@ -3,6 +3,7 @@
       <h1>{{brewery.name}}</h1>
       <p>{{brewery.description}}</p>
       <p class="location">{{ brewery.location }}</p>
+       <img v-bind:src="brewery.imageUrl" >
       <div>
       <router-link
         :to="{ 
@@ -24,6 +25,7 @@ export default {
         name: "",
         description: "",
         location: "",
+        imageUrl:""
       },
     };
   },

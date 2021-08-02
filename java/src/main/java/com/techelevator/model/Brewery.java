@@ -6,20 +6,30 @@ public class Brewery {
     private int breweryId;
     private String name;
     private String location;
-    //private String imageUrl;
+    private String imageUrl;
     private String description;
+
 
     public Brewery() {
 
     }
 
-    public Brewery(int breweryId, String name, String location, String description){
+
+
+    public Brewery(int breweryId, String name, String location, String description, String imageUrl){
         this.breweryId = breweryId;
         this.name = name;
         this.description = description;
         this.location = location;
+        this.imageUrl = imageUrl;
+    }
+    public String getImageUrl() {
+        return imageUrl;
     }
 
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
     public int getBreweryId() {
         return breweryId;
     }

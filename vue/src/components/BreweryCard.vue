@@ -3,6 +3,7 @@
     <h1 class="name">{{ brewery.name }}</h1>
     <h2 class="description">{{ brewery.description }}</h2>
     <h2 class="location">{{ brewery.location }}</h2>
+    <img v-bind:src="brewery.imageUrl" >
 
   </div>
 </template>

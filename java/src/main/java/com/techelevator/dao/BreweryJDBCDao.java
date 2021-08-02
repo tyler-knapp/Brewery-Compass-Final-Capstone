@@ -51,6 +51,7 @@ public class BreweryJDBCDao implements BreweryDAO{
         brewery.setName(rs.getString("brewery_name"));
         brewery.setDescription(rs.getString("description"));
         brewery.setLocation(rs.getString("brewery_location"));
+        brewery.setImageUrl(rs.getString("image_url"));
         return brewery;
     }
 }
