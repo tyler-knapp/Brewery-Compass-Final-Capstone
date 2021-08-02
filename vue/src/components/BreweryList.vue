@@ -6,6 +6,7 @@
       v-bind:brewery="brewery"
       v-bind:style="{ 'background-color':randomBackgroundColor() }"
     />
+    
   </div>
 </template>
 
