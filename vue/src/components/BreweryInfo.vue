@@ -2,6 +2,7 @@
   <div>
       <h1>{{brewery.name}}</h1>
       <p>{{brewery.description}}</p>
+      <p class="location">{{ brewery.location }}</p>
       <div>
       <router-link
         :to="{ 
@@ -26,9 +27,10 @@ export default {
       },
     };
   },
+  
   created() {
-    const breweryId = this.$route.params.boardID;
-    breweryService.getBrewery(breweryId).then((response) => {
+    const breweryId = this.$route.params.breweryID;
+    breweryService.getBrewery(breweryId).then(response => {
       this.brewery = response.data;
     });
   },

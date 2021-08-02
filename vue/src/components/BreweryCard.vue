@@ -1,5 +1,5 @@
 <template>
-  <div id="breweryCard" v-on:click="goToBreweryPage">
+  <div id="breweryCard" v-on:click="goToBreweryPage" >
     <h1 class="name">{{ brewery.name }}</h1>
     <h2 class="description">{{ brewery.description }}</h2>
     <h2 class="location">{{ brewery.location }}</h2>
