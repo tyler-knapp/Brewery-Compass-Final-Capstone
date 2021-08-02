@@ -8,4 +8,6 @@ public interface BreweryDAO {
 
     List<Brewery> findAll();
 
+    Brewery getBrewery(int breweryId);
+
 }

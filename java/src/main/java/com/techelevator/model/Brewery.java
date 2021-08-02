@@ -6,6 +6,7 @@ public class Brewery {
     private int breweryId;
     private String name;
     private String location;
+    //private String imageUrl;
     private String description;
 
     public Brewery() {
