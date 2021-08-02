@@ -15,7 +15,7 @@ export default {
       this.$router.push({
         name: "breweries-detail",
         params: {
-          breweryID: this.brewery.breweryID
+          breweryID: this.brewery.breweryId
         }
       })
     }
