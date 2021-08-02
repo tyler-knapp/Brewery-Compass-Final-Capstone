@@ -14,8 +14,6 @@ public class Brewery {
 
     }
 
-
-
     public Brewery(int breweryId, String name, String location, String description, String imageUrl){
         this.breweryId = breweryId;
         this.name = name;
