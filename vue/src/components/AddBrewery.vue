@@ -10,16 +10,32 @@
         <input type="text" id="descrition" v-model="brewery.description" required />
       </div>
       <div>
-        <label for="location">Location:</label>
-        <input type="text" id="location" v-model="brewery.location" required />
+        <label for="address">Address:</label>
+        <input type="text" id="address" v-model="brewery.address" required />
       </div>
       <div>
-        <label for="image">Image:</label>
-        <input type="image" id="image" v-model="brewery.imageUrl"/>
+        <label for="state">State:</label>
+        <input type="text" id="state" v-model="brewery.state" required />
       </div>
       <div>
-        <label for="url">URL:</label>
-        <input type="url" id="url" v-model="brewery.imageUrl" />
+        <label for="city">City:</label>
+        <input type="text" id="city" v-model="brewery.city" required />
+      </div>
+      <div>
+        <label for="zip">Zip Code:</label>
+        <input type="text" id="zip" v-model="brewery.zipCode" required />
+      </div>
+      <div>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" v-model="brewery.phoneNumber" required />
+      </div>
+      <div>
+        <label for="websiteurl">Website Url:</label>
+        <input type="url" id="websiteurl" v-model="brewery.websiteUrl" required />
+      </div>
+      <div>
+        <label for="imageurl">Image Url:</label>
+        <input type="url" id="imageurl" v-model="brewery.imageUrl" />
       </div>
       <input type="submit">
     </form>

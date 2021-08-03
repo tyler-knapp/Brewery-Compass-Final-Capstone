@@ -1,7 +1,5 @@
 <template>
   <div id="breweryDetail">
-    <p>{{ brewery.location }}</p>
-    <p>{{ brewery.description }}</p>
     <brewery-info />
     <add-brewery />
   </div>
