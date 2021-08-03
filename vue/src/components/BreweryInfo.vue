@@ -1,6 +1,10 @@
 <template>
   <div>
-      <h1>{{brewery.name}}</h1>
+    <header class="headerFixed">
+      <div>
+        <h1>{{brewery.name}}</h1>
+      </div>
+    </header>
       <p>{{brewery.description}}</p>
       <p>{{brewery.address}}</p>
       <p class="location">{{brewery.city}}, {{ brewery.state }}, {{brewery.zipCode}}</p>

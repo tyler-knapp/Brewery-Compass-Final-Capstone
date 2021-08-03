@@ -6,10 +6,6 @@
       v-bind:brewery="brewery"
       v-bind:style="{ 'background-color':randomBackgroundColor() }"
     />
-    <div class="loading" v-if="isLoading">
-      <img src="../assets/ping_pong_loader.gif" />
-    </div>
-    
   </div>
 </template>
 
