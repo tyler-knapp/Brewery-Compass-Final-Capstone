@@ -2,14 +2,12 @@
   <div>
       <h1>{{brewery.name}}</h1>
       <p>{{brewery.description}}</p>
-      <p class="location">{{ brewery.location }}</p>
-       <img v-bind:src="brewery.imageUrl" >
+      <p>{{brewery.address}}</p>
+      <p class="location">{{brewery.city}}, {{ brewery.state }}, {{brewery.zipCode}}</p>
+      <p>{{brewery.phoneNumber}}</p>
+      <img v-bind:src="brewery.imageUrl" >
       <div>
-      <router-link
-        :to="{ 
-          name: 'breweries',  
-          }"
-      >Back to Brewery List</router-link>
+      <router-link :to="{ name: 'breweries'}">Back to Brewery List</router-link>
     </div>
   </div>
 </template>
@@ -24,7 +22,12 @@ export default {
       brewery: {
         name: "",
         description: "",
-        location: "",
+        address: "",
+        state: "",
+        city: "",
+        phoneNumber: "",
+        websiteUrl: "",
+        zipCode: "",
         imageUrl:""
       },
     };
