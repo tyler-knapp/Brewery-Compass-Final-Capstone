@@ -1,6 +1,6 @@
 <template>
     <div>
-    <form class="form" id="form" @submit.prevent="addBrewery">
+    <form class="form" @submit.prevent="addBrewery">
       <div>
         <label for="name">Name:</label>
         <input type="text" id="name" v-model="brewery.name" required />
@@ -66,7 +66,7 @@ export default {
 </script>
 
 <style>
-#form{
+label{
    display: table-row-group;
 
 }

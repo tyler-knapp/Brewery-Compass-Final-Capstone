@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1>Breweries</h1>
+      <h1 class ="headerText">Breweries</h1>
       <brewery-list />
   </div>
 </template>
@@ -21,7 +21,14 @@ export default {
 </script>
 
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+  .headerText{
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    color: crimson;
+    
+  }
 
 
 </style>

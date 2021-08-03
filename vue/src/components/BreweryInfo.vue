@@ -1,11 +1,12 @@
 <template>
   <div>
-      <h1>{{brewery.name}}</h1>
-      <p>{{brewery.description}}</p>
-      <p>{{brewery.address}}</p>
-      <p class="location">{{brewery.city}}, {{ brewery.state }}, {{brewery.zipCode}}</p>
-      <p>{{brewery.phoneNumber}}</p>
-      <img v-bind:src="brewery.imageUrl" >
+      <h1 class = "title" >{{brewery.name}}</h1>
+      <h3 class = "description">{{brewery.description}}</h3>
+       <img class = "image" v-bind:src="brewery.imageUrl"  >
+        <h4>{{brewery.address}}</h4>
+      <h4 class="location">{{brewery.city}}, {{ brewery.state }}, {{brewery.zipCode}}</h4>
+      <h4>{{brewery.phoneNumber}}</h4>
+   
       <div>
       <router-link :to="{ name: 'breweries'}">Back to Brewery List</router-link>
     </div>
@@ -41,3 +42,18 @@ export default {
   },
 };
 </script>
+<style  scoped>
+  .title{
+    text-align: center;
+
+  }
+  .description{
+   text-align: center;
+  }
+  .image{
+    height: 500px ;
+    width: 100%;
+  }
+
+
+</style>
