@@ -7,6 +7,7 @@
       v-bind:style="{ 'background-color':randomBackgroundColor() }"
     />
   </div>
+
 </template>
 
 <script>
