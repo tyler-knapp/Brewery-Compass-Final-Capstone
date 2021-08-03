@@ -1,14 +1,11 @@
 <template>
     <div>
-    <form @submit.prevent="addBrewery">
+    <form class="form" id="form" @submit.prevent="addBrewery">
       <div>
         <label for="name">Name:</label>
         <input type="text" id="name" v-model="brewery.name" required />
       </div>
-      <div>
-        <label for="description">Description:</label>
-        <input type="text" id="descrition" v-model="brewery.description" required />
-      </div>
+      
       <div>
         <label for="address">Address:</label>
         <input type="text" id="address" v-model="brewery.address" required />
@@ -36,6 +33,10 @@
       <div>
         <label for="imageurl">Image Url:</label>
         <input type="url" id="imageurl" v-model="brewery.imageUrl" />
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <input style="height:200px;font-size:14pt;" type="text" id="descrition" v-model="brewery.description"  />
       </div>
       <input type="submit">
     </form>
@@ -65,5 +66,10 @@ export default {
 </script>
 
 <style>
+#form{
+   display: table-row-group;
+
+}
+
 
 </style>
