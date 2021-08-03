@@ -8,6 +8,11 @@
 <script>
 import BreweryList from '@/components/BreweryList'
 export default {
+  data(){
+    return{
+
+    }
+  },
     name: 'breweries',
     components: {
        BreweryList 
@@ -16,5 +21,7 @@ export default {
 </script>
 
 <style>
+
+
 
 </style>
