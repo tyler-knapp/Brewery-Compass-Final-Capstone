@@ -1,9 +1,7 @@
 <template>
-  <div id="breweryCard" v-on:click="goToBreweryPage">
+  <div id="breweryCard" v-on:click="goToBreweryPage" >
     <h1 class="name">{{ brewery.name }}</h1>
-    <h2 class="description">{{ brewery.description }}</h2>
-    <h2 class="location">{{ brewery.location }}</h2>
-
+    <img class="cardimage" v-bind:src="brewery.imageUrl" >
   </div>
 </template>
 
@@ -24,9 +22,24 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
-* {
-  font-family: "Rubik", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+
+
+.name{
+  text-decoration: rgb(72, 77, 72) dotted underline;
+  font-family: 'Patua One', cursive;
+  font-size: 48px;
+  text-align: center;
+  text-shadow: 4px 2px rgb(122, 112, 112);
+  animation: glowing 1300ms infinite;
+}
+
+.cardimage {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+  
 }
 
 #breweryCard {
@@ -36,7 +49,7 @@ export default {
   padding: 10px;
   border: 1px black solid;
   border-radius: 10px;
-
+  cursor: pointer;
 }
 
 </style>

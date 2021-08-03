@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @CrossOrigin
@@ -28,6 +29,11 @@ public class BreweryController {
     @RequestMapping(path = "breweries/{breweryId}", method = RequestMethod.GET)
     public Brewery retrieve( @PathVariable (name ="breweryId") int breweryId){
         return breweryDAO.getBrewery(breweryId);
+    }
+
+    @RequestMapping(path="/breweries", method= RequestMethod.POST)
+    public Brewery add(@RequestBody Brewery brewery) {
+        return breweryDAO.createBrewery(brewery);
     }
 
 }

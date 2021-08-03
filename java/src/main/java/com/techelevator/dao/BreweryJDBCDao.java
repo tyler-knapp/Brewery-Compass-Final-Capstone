@@ -45,12 +45,28 @@ public class BreweryJDBCDao implements BreweryDAO{
         return brewery;
     }
 
+    @Override
+    public Brewery createBrewery(Brewery brewery) {
+
+        String sql = "INSERT INTO breweries (brewery_id, brewery_name, brewery_state, brewery_city, brewery_address, brewery_zip_code, brewery_phone_number, brewery_website_url, description, image_url) VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING brewery_id";
+        int id = jdbcTemplate.queryForObject(sql, Integer.class, brewery.getName(), brewery.getState(), brewery.getCity(), brewery.getAddress(), brewery.getZipCode(), brewery.getPhoneNumber(), brewery.getWebsiteUrl(), brewery.getDescription(), brewery.getImageUrl());
+        brewery.setBreweryId(id);
+
+        return brewery;
+    }
+
     private Brewery mapRowToBrewery(SqlRowSet rs){
         Brewery brewery = new Brewery();
         brewery.setBreweryId(rs.getInt("brewery_id"));
         brewery.setName(rs.getString("brewery_name"));
         brewery.setDescription(rs.getString("description"));
-        brewery.setLocation(rs.getString("brewery_location"));
+        brewery.setState(rs.getString("brewery_state"));
+        brewery.setCity(rs.getString("brewery_city"));
+        brewery.setAddress(rs.getString("brewery_address"));
+        brewery.setZipCode(rs.getString("brewery_zip_code"));
+        brewery.setPhoneNumber(rs.getString("brewery_phone_number"));
+        brewery.setWebsiteUrl(rs.getString("brewery_website_url"));
+        brewery.setImageUrl(rs.getString("image_url"));
         return brewery;
     }
 }

@@ -10,4 +10,8 @@ public interface BreweryDAO {
 
     Brewery getBrewery(int breweryId);
 
+    Brewery createBrewery(Brewery brewery);
+
+
+
 }
