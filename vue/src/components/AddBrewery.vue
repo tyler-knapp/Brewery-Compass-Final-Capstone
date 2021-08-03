@@ -4,8 +4,12 @@
     <form @submit.prevent="addBrewery">
 =======
     <div>
+<<<<<<< HEAD
+    <form class="form" @submit.prevent="addBrewery">
+=======
     <form class="form" id="form" @submit.prevent="addBrewery">
 >>>>>>> 5432bca9315c62713c10a38b9aae4ab745d4e977
+>>>>>>> 2ec9a3ee8157af8778c8a782e9393822a80bb0a1
       <div>
         <label for="name">Name:</label>
         <input type="text" id="name" v-model="brewery.name" required />
@@ -148,8 +152,12 @@ export default {
 
 <style>
 <<<<<<< HEAD
+label{
+=======
+<<<<<<< HEAD
 =======
 #form{
+>>>>>>> 2ec9a3ee8157af8778c8a782e9393822a80bb0a1
    display: table-row-group;
 
 }
