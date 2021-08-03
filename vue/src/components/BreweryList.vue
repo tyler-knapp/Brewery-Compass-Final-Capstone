@@ -6,6 +6,13 @@
       v-bind:brewery="brewery"
       v-bind:style="{ 'background-color':randomBackgroundColor() }"
     />
+<<<<<<< HEAD
+=======
+    <div class="loading" v-if="isLoading">
+      <img src="../assets/beer_loading.gif" />
+    </div>
+    
+>>>>>>> 5432bca9315c62713c10a38b9aae4ab745d4e977
   </div>
 </template>
 

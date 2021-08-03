@@ -1,10 +1,16 @@
 <template>
+<<<<<<< HEAD
   <div>
     <form @submit.prevent="addBrewery">
+=======
+    <div>
+    <form class="form" id="form" @submit.prevent="addBrewery">
+>>>>>>> 5432bca9315c62713c10a38b9aae4ab745d4e977
       <div>
         <label for="name">Name:</label>
         <input type="text" id="name" v-model="brewery.name" required />
       </div>
+<<<<<<< HEAD
       <div>
         <label for="description">Description:</label>
         <input
@@ -14,6 +20,9 @@
           required
         />
       </div>
+=======
+      
+>>>>>>> 5432bca9315c62713c10a38b9aae4ab745d4e977
       <div>
         <label for="address">Address:</label>
         <input type="text" id="address" v-model="brewery.address" required />
@@ -103,7 +112,15 @@
         <label for="imageurl">Image Url:</label>
         <input type="url" id="imageurl" v-model="brewery.imageUrl" />
       </div>
+<<<<<<< HEAD
       <input type="submit" />
+=======
+      <div>
+        <label for="description">Description:</label>
+        <input style="height:200px;font-size:14pt;" type="text" id="descrition" v-model="brewery.description"  />
+      </div>
+      <input type="submit">
+>>>>>>> 5432bca9315c62713c10a38b9aae4ab745d4e977
     </form>
   </div>
 </template>
@@ -130,4 +147,13 @@ export default {
 </script>
 
 <style>
+<<<<<<< HEAD
+=======
+#form{
+   display: table-row-group;
+
+}
+
+
+>>>>>>> 5432bca9315c62713c10a38b9aae4ab745d4e977
 </style>
