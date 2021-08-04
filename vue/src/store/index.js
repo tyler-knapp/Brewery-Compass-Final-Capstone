@@ -22,9 +22,24 @@ export default new Vuex.Store({
     user: currentUser || {},
     breweries: []
   },
+  activeBrewery: {
+    id: 0,
+    address: '',
+    name: '',
+    state: '',
+    city: '',
+    zipCode: '',
+    phoneNumber: '',
+    websiteUrl: '',
+    imageUrl:'',
+    description: '',
+  },
   mutations: {
     SET_BREWERIES(state, breweries){
       state.breweries = breweries;
+    },
+    SET_ACTIVE_BREWERY(state, data) {
+      state.activeBrewery = data;
     },
     SET_AUTH_TOKEN(state, token) {
       state.token = token;

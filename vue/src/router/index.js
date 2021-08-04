@@ -7,6 +7,8 @@ import Register from '../views/Register.vue'
 import store from '../store/index'
 import Breweries from '../views/Breweries.vue'
 import BreweryDetail from '../views/BreweryDetail.vue'
+import NotFound from '../views/NotFound.vue'
+import EditBrewery from '../views/EditBrewery.vue'
 
 Vue.use(Router)
 
@@ -32,6 +34,14 @@ const router = new Router({
       }
     },
     {
+      path: "/not-found",
+      name: "NotFound",
+      component: NotFound,
+      meta: {
+        requiresAuth: false
+      }
+    },
+    {
       path: "/login",
       name: "login",
       component: Login,
@@ -51,6 +61,14 @@ const router = new Router({
       path: "/register",
       name: "register",
       component: Register,
+      meta: {
+        requiresAuth: false
+      }
+    },
+    {
+      path: '/edit-brewery/:id',
+      name: 'EditBrewery',
+      component: EditBrewery,
       meta: {
         requiresAuth: false
       }

@@ -12,6 +12,8 @@ public interface BreweryDAO {
 
     Brewery createBrewery(Brewery brewery);
 
+    void update(Brewery brewery);
+
 
 
 }
