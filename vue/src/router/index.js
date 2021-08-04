@@ -12,6 +12,7 @@ import EditBrewery from '../views/EditBrewery.vue'
 import NewBreweryForm from '../views/NewBreweryForm.vue'
 
 
+
 Vue.use(Router)
 
 /**
@@ -98,7 +99,16 @@ const router = new Router({
       meta: {
         requiresAuth: false
       }
-    }
+    },
+    // {
+    //   path: '/breweries/:breweryID/beers',
+    //   name: 'beer',
+    //   component: Beer,
+    //   meta: {
+    //     requiresAuth: false
+    //   }
+    // }
+
 
   ]
 })

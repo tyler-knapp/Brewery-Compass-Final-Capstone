@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface BeerDAO {
 
-    List<Beer> listAllBeers();
+    List<Beer> listAllBeers(int id);
 }
