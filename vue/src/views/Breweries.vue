@@ -1,9 +1,6 @@
 <template>
   <div>
-<<<<<<< HEAD
-      <h1 class ="headerText">Breweries</h1>
-      <brewery-list />
-=======
+
     <div class="header">
       <h1>
         Brew Hopper
@@ -12,7 +9,7 @@
 
     </div>
       <brewery-list  class="brewery-list"/>
->>>>>>> 2ec9a3ee8157af8778c8a782e9393822a80bb0a1
+
   </div>
 </template>
 
@@ -32,16 +29,6 @@ export default {
 </script>
 
 <style>
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-  .headerText{
-    font-size: 80px;
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-    color: crimson;
-    
-  }
-=======
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
 
 .header {
@@ -49,14 +36,15 @@ export default {
   text-align: center;
   background-color: rgb(113, 224, 191);
   color: white;
-  font-size: 40px;
+  font-size: 28px;
   position: fixed;
+  height: auto;
   width: 100%;
   font-family: 'Raleway', sans-serif;
 }
 
 .header .router:hover {
-  background: #ddd;
+  background: rgb(91, 180, 74);
   color: black;
 }
 
@@ -77,7 +65,7 @@ export default {
   text-decoration: none;
 
 }
->>>>>>> 2ec9a3ee8157af8778c8a782e9393822a80bb0a1
+
 
 
 </style>
