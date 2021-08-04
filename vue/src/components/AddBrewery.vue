@@ -1,32 +1,10 @@
 <template>
-<<<<<<< HEAD
-  <div>
-    <form @submit.prevent="addBrewery">
-=======
     <div>
-<<<<<<< HEAD
     <form class="form" @submit.prevent="addBrewery">
-=======
-    <form class="form" id="form" @submit.prevent="addBrewery">
->>>>>>> 5432bca9315c62713c10a38b9aae4ab745d4e977
->>>>>>> 2ec9a3ee8157af8778c8a782e9393822a80bb0a1
       <div>
         <label for="name">Name:</label>
         <input type="text" id="name" v-model="brewery.name" required />
       </div>
-<<<<<<< HEAD
-      <div>
-        <label for="description">Description:</label>
-        <input
-          type="text"
-          id="descrition"
-          v-model="brewery.description"
-          required
-        />
-      </div>
-=======
-      
->>>>>>> 5432bca9315c62713c10a38b9aae4ab745d4e977
       <div>
         <label for="address">Address:</label>
         <input type="text" id="address" v-model="brewery.address" required />
@@ -116,15 +94,11 @@
         <label for="imageurl">Image Url:</label>
         <input type="url" id="imageurl" v-model="brewery.imageUrl" />
       </div>
-<<<<<<< HEAD
-      <input type="submit" />
-=======
       <div>
         <label for="description">Description:</label>
         <input style="height:200px;font-size:14pt;" type="text" id="descrition" v-model="brewery.description"  />
       </div>
       <input type="submit">
->>>>>>> 5432bca9315c62713c10a38b9aae4ab745d4e977
     </form>
   </div>
 </template>
@@ -151,17 +125,9 @@ export default {
 </script>
 
 <style>
-<<<<<<< HEAD
 label{
-=======
-<<<<<<< HEAD
-=======
-#form{
->>>>>>> 2ec9a3ee8157af8778c8a782e9393822a80bb0a1
+
    display: table-row-group;
 
 }
-
-
->>>>>>> 5432bca9315c62713c10a38b9aae4ab745d4e977
 </style>
