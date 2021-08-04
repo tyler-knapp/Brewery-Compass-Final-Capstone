@@ -6,8 +6,15 @@
       v-bind:brewery="brewery"
       v-bind:style="{ 'background-color':randomBackgroundColor() }"
     />
+<<<<<<< HEAD
+=======
+    <div class="loading" v-if="isLoading">
+      <img src="../assets/beer_loading.gif" />
+    </div>
     
+>>>>>>> 5432bca9315c62713c10a38b9aae4ab745d4e977
   </div>
+
 </template>
 
 <script>
@@ -17,6 +24,11 @@ import breweryService from "@/services/BreweryService";
 export default {
   components: {
     BreweryCard,
+  },
+  data() {
+    return {
+      isLoading: true
+    }
   },
   computed: {
     display() {
@@ -29,6 +41,7 @@ export default {
         .findAll()
         .then((response) => {
           this.$store.commit("SET_BREWERIES", response.data);
+          this.isLoading = false;
         })
         .catch((error) => {
           // Status Code error: 500, 400
@@ -63,4 +76,5 @@ export default {
 </script>
 
 <style>
+
 </style>

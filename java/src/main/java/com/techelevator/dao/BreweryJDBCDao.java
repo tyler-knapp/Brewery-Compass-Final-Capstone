@@ -40,6 +40,8 @@ public class BreweryJDBCDao implements BreweryDAO{
 
         if(results.next()){
             brewery = mapRowToBrewery(results);
+        } else {
+            throw new RuntimeException("Brewery "+ breweryId +" was not found.");
         }
 
         return brewery;
