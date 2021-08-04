@@ -9,6 +9,8 @@ import Breweries from '../views/Breweries.vue'
 import BreweryDetail from '../views/BreweryDetail.vue'
 import NotFound from '../views/NotFound.vue'
 import EditBrewery from '../views/EditBrewery.vue'
+import NewBreweryForm from '../views/NewBreweryForm.vue'
+
 
 Vue.use(Router)
 
@@ -88,7 +90,16 @@ const router = new Router({
       meta: {
         requiresAuth: false
       }
+    },
+    {
+      path: '/add-brewery',
+      name: 'AddBrewery',
+      component: NewBreweryForm,
+      meta: {
+        requiresAuth: false
+      }
     }
+
   ]
 })
 
