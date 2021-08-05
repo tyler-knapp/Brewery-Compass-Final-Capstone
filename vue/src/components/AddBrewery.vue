@@ -96,9 +96,9 @@
       </div>
       <div>
         <label for="description">Description:</label>
-        <input style="height:200px;font-size:14pt;" type="text" id="descrition" v-model="brewery.description"  />
+        <input style="height:120px;font-size:12pt;" type="text" id="description" v-model="brewery.description"  />
       </div>
-      <input type="submit">
+      <input type="submit" />
     </form>
   </div>
 </template>
@@ -125,9 +125,8 @@ export default {
 </script>
 
 <style>
+
 label{
-
    display: table-row-group;
-
 }
 </style>

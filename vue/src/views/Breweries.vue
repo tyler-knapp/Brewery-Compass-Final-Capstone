@@ -8,6 +8,7 @@
 
     </div>
       <brewery-list  class="brewery-list"/>
+
   </div>
 </template>
 
@@ -34,14 +35,15 @@ export default {
   text-align: center;
   background-color: rgb(113, 224, 191);
   color: white;
-  font-size: 40px;
+  font-size: 28px;
   position: fixed;
+  height: auto;
   width: 100%;
   font-family: 'Raleway', sans-serif;
 }
 
 .header .router:hover {
-  background: #ddd;
+  background: rgb(91, 180, 74);
   color: black;
 }
 

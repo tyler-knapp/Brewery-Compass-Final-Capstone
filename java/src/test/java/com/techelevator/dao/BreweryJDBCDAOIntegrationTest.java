@@ -12,14 +12,11 @@ public class BreweryJDBCDAOIntegrationTest extends DAOIntegrationTest{
 
     private JdbcTemplate jdbcTemplate;
     private BreweryDAO breweryDAO;
-
-
+    
     @Before
     public void setup(){
-
         jdbcTemplate = new JdbcTemplate(getDataSource());
         breweryDAO = new BreweryJDBCDao(jdbcTemplate);
-
     }
 
     @Test
@@ -44,7 +41,6 @@ public class BreweryJDBCDAOIntegrationTest extends DAOIntegrationTest{
 
         Assert.assertNotNull("Brewery was null",breweryFromDatabase);
         Assert.assertEquals("Test Name",  breweryFromDatabase.getName());
-
     }
 
 
