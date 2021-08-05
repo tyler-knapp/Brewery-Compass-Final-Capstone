@@ -10,6 +10,7 @@ import BreweryDetail from '../views/BreweryDetail.vue'
 import NotFound from '../views/NotFound.vue'
 import EditBrewery from '../views/EditBrewery.vue'
 import NewBreweryForm from '../views/NewBreweryForm.vue'
+import BeerDetail from '../views/BeerDetail.vue'
 
 
 
@@ -100,14 +101,14 @@ const router = new Router({
         requiresAuth: false
       }
     },
-    // {
-    //   path: '/breweries/:breweryID/beers/:beerID',
-    //   name: 'beer',
-    //   component: Beer,
-    //   meta: {
-    //     requiresAuth: false
-    //   }
-    // }
+     {
+       path: '/breweries/:breweryID/beers/:beerID',
+       name: 'beer-detail',
+       component: BeerDetail,
+       meta: {
+         requiresAuth: false
+       }
+     }
 
 
   ]
