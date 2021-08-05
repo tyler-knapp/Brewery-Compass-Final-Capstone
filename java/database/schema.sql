@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 BEGIN TRANSACTION;
-=======
- BEGIN TRANSACTION;
->>>>>>> 5e00520ab1a389cb01dd10410fbecdfeedcae060
+
 
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS breweries;
