@@ -1,5 +1,7 @@
 <template>
   <div id="beerDetail">
+    <h1>{{beer.name}}</h1>
+    <img v-bind:src="beer.imageUrl">
     <beer-info />
   </div>
 </template>
@@ -15,7 +17,7 @@ export default {
   name: "beer-detail",
   data() {
     return {
-      beer: []
+      beer: {}
     };
   },
   created() {
