@@ -33,14 +33,14 @@ public class BeerJDBCDAO implements BeerDAO {
 
     @Override
     public Beer getBeerInfoByBeerId(int beerId, int breweryId) {
-        Beer beer = null;
+        Beer beer = new Beer();
 
-        String sql= "SELECT beer_name, beer_image FROM beers WHERE brewery_id = ? AND beer_id = ?";
+        String sql= "SELECT * FROM beers WHERE brewery_id = ? AND beer_id = ?";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, beerId, breweryId);
         if(results.next()){
             beer = mapRowToBeer(results);
-        } else {
-            throw new RuntimeException("Beer "+ beerId +" was not found.");
+//        } else {
+//            throw new RuntimeException("Beer "+ beerId +" was not found.");
         }
         return beer;
     }
@@ -50,6 +50,7 @@ public class BeerJDBCDAO implements BeerDAO {
         beer.setBeerId(rs.getInt("beer_id"));
         beer.setName(rs.getString("beer_name"));
         beer.setImageUrl(rs.getString("beer_image"));
+        beer.setBreweryId(rs.getInt("brewery_id"));
         return beer;
     }
 }

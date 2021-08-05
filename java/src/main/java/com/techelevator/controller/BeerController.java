@@ -1,6 +1,7 @@
 package com.techelevator.controller;
 
 
+import com.techelevator.NotFoundException.BeerNotFoundException;
 import com.techelevator.dao.BeerDAO;
 import com.techelevator.model.Beer;
 import org.springframework.web.bind.annotation.*;
@@ -18,12 +19,12 @@ public class BeerController {
     }
 
     @RequestMapping(path = "/breweries/{id}/beers", method = RequestMethod.GET)
-    public List<Beer> list(@PathVariable int id) {
+    public List<Beer> list(@PathVariable  int id) {
         return beerDAO.listAllBeers(id);
     }
 
-    @RequestMapping (path = "/breweries/{id}/beers/{beerId}", method = RequestMethod.GET)
-    public Beer retrieve(@PathVariable int breweryId, int beerId) {
-        return beerDAO.getBeerInfoByBeerId(beerId, breweryId);
+    @RequestMapping (path = "/breweries/{breweryId}/beers/{beerId}", method = RequestMethod.GET)
+    public Beer retrieve(@PathVariable (name = "breweryId") Integer breweryId, @PathVariable (name = "beerId") Integer beerId) throws BeerNotFoundException {
+        return beerDAO.getBeerInfoByBeerId(breweryId, beerId);
     }
     }
