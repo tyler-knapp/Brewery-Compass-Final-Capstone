@@ -52,8 +52,10 @@ constraint fk_beers_brewery_id foreign key (brewery_id) references breweries(bre
 
 INSERT INTO beers (beer_name , brewery_id , beer_image )
 VALUES ('Samuel Adams' , 1 , 'https://boeningbrothers.com/product/samuel-adams-jack-o/' );
+
 INSERT INTO beers (beer_name , brewery_id , beer_image )
 VALUES ('Punk IPA' , 2 , 'https://www.drinksandco.com/beer/brewdog-punk-ipa' );
+
 INSERT INTO beers (beer_name , brewery_id , beer_image )
 VALUES ('St George Amber Beer' , 3 , 'https://beerisdevine.com/wp-content/uploads/BGI-Ethiopia-St-George-Beer-678x381.jpg' );
 
