@@ -1,6 +1,6 @@
 <template>
   <div id="beerCard" >
-      <h1> Beer Name </h1>
+      <h1 class="name"> {{beer.name}} </h1>
   </div>
 </template>
 

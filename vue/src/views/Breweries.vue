@@ -12,14 +12,14 @@
 
     </div>
       <brewery-list  class="brewery-list"/>
-      <beer-card class="beer-card" />
+    <!-- <beer-card class="beer-card" /> -->
 
   </div>
 </template>
 
 <script>
 import BreweryList from '@/components/BreweryList'
-import BeerCard from '../components/BeerCard'
+//import BeerCard from '../components/BeerCard'
 
 export default {
   data(){
@@ -29,8 +29,8 @@ export default {
   },
     name: 'breweries',
     components: {
-       BreweryList,
-        BeerCard 
+       BreweryList
+       // BeerCard 
        },
 }
 </script>

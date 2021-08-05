@@ -54,9 +54,6 @@ export default {
     height: 500px ;
     width: 100%;
   }
-  .location{
-    margin-left:  ;
-  }
 
 
 </style>
