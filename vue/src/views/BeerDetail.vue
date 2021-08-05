@@ -10,12 +10,12 @@ import BeerInfo from "@/components/BeerInfo";
 
 export default {
   components: {
-    BeerInfo,
+    BeerInfo
   },
   name: "beer-detail",
   data() {
     return {
-      beer: {},
+      beer: []
     };
   },
   created() {

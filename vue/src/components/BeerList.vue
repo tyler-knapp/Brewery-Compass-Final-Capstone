@@ -34,7 +34,7 @@ computed: {
  methods: {
     getAllBeers() {
         BeerService
-       .getAllBeersByBreweryId(1)
+       .getAllBeersByBreweryId(breweryID) 
         .then((response) => {
           this.$store.commit("SET_BEERS", response.data);
           this.isLoading = false;
