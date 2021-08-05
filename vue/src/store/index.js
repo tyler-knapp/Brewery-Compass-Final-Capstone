@@ -21,26 +21,30 @@ export default new Vuex.Store({
     token: currentToken || '',
     user: currentUser || {},
     breweries: [] ,
-    beers: []
+    beers: [],
+    beer:{
+      name:'',
+      imageUrl:''
+    }
   },
-  activeBrewery: {
-    id: 0,
-    address: '',
-    name: '',
-    state: '',
-    city: '',
-    zipCode: '',
-    phoneNumber: '',
-    websiteUrl: '',
-    imageUrl:'',
-    description: '',
-  },
+  // activeBrewery: {
+  //   id: 0,
+  //   address: '',
+  //   name: '',
+  //   state: '',
+  //   city: '',
+  //   zipCode: '',
+  //   phoneNumber: '',
+  //   websiteUrl: '',
+  //   imageUrl:'',
+  //   description: '',
+  // },
   mutations: {
     SET_BREWERIES(state, breweries){
       state.breweries = breweries;
     },
     SET_BEERS(state, beers){
-      state.beers = beers;
+      state.beers = beers
     },
     SET_ACTIVE_BREWERY(state, data) {
       state.activeBrewery = data;

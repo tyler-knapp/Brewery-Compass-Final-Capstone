@@ -1,37 +1,40 @@
 <template>
-   <div>
-    <beer-card
-      v-for="beer in display"
-      v-bind:key="beer.id"
-      v-bind:beer="beer"
-      v-bind:style="{ 'background-color':randomBackgroundColor() }"
-    />
+  <div>
+    <beer-card v-for="beer in beerDisplay"
+     v-bind:key="beer.id"
+     v-bind:beer="beer" />
+     <brewery-list/>
   </div>
 </template>
 
 <script>
-import BeerCard from "@/components/BeerCard";
-import beerService from "@/services/BeerService";
+import BeerService from '../services/BeerService';
+import BeerCard from '../BeerCard.vue'
+import BreweryList from '../BreweryList.vue';
+
 export default {
-    components: {
-        BeerCard,
-    },
-    data() {
-        return {
-            isLoading: true
-        }
-    },
-    computed: {
-        display() {
+  components: {
+    BeerCard,
+    BreweryList
+
+  },
+  data(){
+      return{
+          name:'',
+          breweryID: 0
+      }
+  },
+
+computed: {
+    beerDisplay() {
       return this.$store.state.beers;
     }
-    },
-      methods: {
-          
+  },
+
+ methods: {
     getAllBeers() {
-    const breweryId = this.$route.params.breweryID;
-    beerService
-        .getAllBeersByBreweryId(breweryId)
+        BeerService
+       .getAllBeersByBreweryId(1)
         .then((response) => {
           this.$store.commit("SET_BEERS", response.data);
           this.isLoading = false;
@@ -51,23 +54,13 @@ export default {
           else {
             console.error("Unexpected Axios error");
           }
+        
         });
+    }
     },
-    randomBackgroundColor() {
-      return "#" + this.generateHexCode();
-    },
-    generateHexCode() {
-      var bg = Math.floor(Math.random() * 16777215).toString(16);
-      if (bg.length !== 6) bg = this.generateHexCode();
-      return bg;
-    },
-  },
-created() {
+    created() {
     this.getAllBeers();
-  },
-};
+  }
+ }
 </script>
 
-<style>
-
-</style>

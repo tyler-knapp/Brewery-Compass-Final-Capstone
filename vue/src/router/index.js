@@ -101,7 +101,7 @@ const router = new Router({
       }
     },
     // {
-    //   path: '/breweries/:breweryID/beers',
+    //   path: '/breweries/:breweryID/beers/:beerID',
     //   name: 'beer',
     //   component: Beer,
     //   meta: {

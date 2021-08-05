@@ -14,6 +14,7 @@ export default {
   data() {
     return {
       beer: {
+        breweryID: 0,
         name: "",
         imageUrl: "",
       },
