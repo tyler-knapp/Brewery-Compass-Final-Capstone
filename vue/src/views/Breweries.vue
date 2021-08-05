@@ -4,16 +4,22 @@
       <h1>
         Brew Hopper
       </h1>
-      <router-link class="router" v-bind:to="{ name: 'home' }">Home</router-link>
+      <div class = "router">
+      <router-link v-bind:to="{ name: 'home' }">Home</router-link>&nbsp;|&nbsp;  
+      <router-link v-bind:to="{ name: 'AddBrewery' }">Add Brewery</router-link>
+      </div>
 
     </div>
       <brewery-list  class="brewery-list"/>
+      <beer-card class="beer-card" />
 
   </div>
 </template>
 
 <script>
 import BreweryList from '@/components/BreweryList'
+import BeerCard from '../components/BeerCard'
+
 export default {
   data(){
     return{
@@ -22,7 +28,8 @@ export default {
   },
     name: 'breweries',
     components: {
-       BreweryList 
+       BreweryList,
+        BeerCard 
        },
 }
 </script>

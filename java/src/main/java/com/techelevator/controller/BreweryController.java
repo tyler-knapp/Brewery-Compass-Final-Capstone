@@ -24,8 +24,6 @@ public class BreweryController {
         return breweryDAO.findAll();
     }
 
-
-
     @RequestMapping(path = "breweries/{breweryId}", method = RequestMethod.GET)
     public Brewery retrieve( @PathVariable (name ="breweryId") int breweryId){
         return breweryDAO.getBrewery(breweryId);
@@ -34,6 +32,11 @@ public class BreweryController {
     @RequestMapping(path="/breweries", method= RequestMethod.POST)
     public Brewery add(@RequestBody Brewery brewery) {
         return breweryDAO.createBrewery(brewery);
+    }
+
+    @RequestMapping(path="/breweries/{id}", method= RequestMethod.PUT)
+    public void update(@PathVariable int id, @RequestBody Brewery brewery) {
+            breweryDAO.update(brewery);
     }
 
 }

@@ -12,7 +12,7 @@ public class BreweryJDBCDAOIntegrationTest extends DAOIntegrationTest{
 
     private JdbcTemplate jdbcTemplate;
     private BreweryDAO breweryDAO;
-    
+
     @Before
     public void setup(){
         jdbcTemplate = new JdbcTemplate(getDataSource());

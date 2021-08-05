@@ -117,6 +117,7 @@ export default {
       breweryService.createBrewery(this.brewery).then((response) => {
         if (response.status === 200) {
           alert("Brewery successful added");
+          this.$router.push('/breweries');
         }
       });
     },

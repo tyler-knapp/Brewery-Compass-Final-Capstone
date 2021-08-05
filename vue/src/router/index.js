@@ -7,6 +7,11 @@ import Register from '../views/Register.vue'
 import store from '../store/index'
 import Breweries from '../views/Breweries.vue'
 import BreweryDetail from '../views/BreweryDetail.vue'
+import NotFound from '../views/NotFound.vue'
+import EditBrewery from '../views/EditBrewery.vue'
+import NewBreweryForm from '../views/NewBreweryForm.vue'
+
+
 
 Vue.use(Router)
 
@@ -29,6 +34,14 @@ const router = new Router({
       component: Home,
       meta: {
         requiresAuth: true
+      }
+    },
+    {
+      path: "/not-found",
+      name: "NotFound",
+      component: NotFound,
+      meta: {
+        requiresAuth: false
       }
     },
     {
@@ -56,6 +69,14 @@ const router = new Router({
       }
     },
     {
+      path: '/edit-brewery/:id',
+      name: 'EditBrewery',
+      component: EditBrewery,
+      meta: {
+        requiresAuth: false
+      }
+    },
+    {
       path: "/breweries",
       name: "breweries",
       component: Breweries,
@@ -70,7 +91,25 @@ const router = new Router({
       meta: {
         requiresAuth: false
       }
-    }
+    },
+    {
+      path: '/add-brewery',
+      name: 'AddBrewery',
+      component: NewBreweryForm,
+      meta: {
+        requiresAuth: false
+      }
+    },
+    // {
+    //   path: '/breweries/:breweryID/beers',
+    //   name: 'beer',
+    //   component: Beer,
+    //   meta: {
+    //     requiresAuth: false
+    //   }
+    // }
+
+
   ]
 })
 
