@@ -30,7 +30,7 @@ export default {
           
     getAllBeers() {
     const breweryId = this.$route.params.breweryID;
-      beerService
+    beerService
         .getAllBeersByBreweryId(breweryId)
         .then((response) => {
           this.$store.commit("SET_BEERS", response.data);
