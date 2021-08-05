@@ -24,8 +24,6 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 
-
-
 .name{
   text-decoration: rgb(72, 77, 72) dotted underline;
   font-family: 'Patua One', cursive;

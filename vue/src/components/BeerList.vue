@@ -14,7 +14,7 @@ import BreweryList from '../BreweryList.vue';
 
 export default {
   components: {
-       BeerCard,
+    BeerCard,
     BreweryList
 
   },
@@ -62,7 +62,5 @@ computed: {
     this.getAllBeers();
   }
  }
-
- 
 </script>
 
