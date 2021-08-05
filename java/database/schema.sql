@@ -25,10 +25,15 @@ CREATE TABLE users (
 CREATE TABLE breweries (
     brewery_id serial primary key,
     brewery_name varchar(100) NOT NULL,
-    brewery_location varchar(200) NOT NULL,
-    description varchar(500),
-    image_url varchar(500)
-);
+    brewery_state varchar(200) NOT NULL,
+    brewery_city varchar(30) NOT NULL,
+    brewery_address varchar(300) NOT NULL,
+    brewery_zip_code varchar(30) NOT NULL,
+    brewery_phone_number varchar (15) NOT NULL,
+    brewery_website_url varchar(1000) NOT NULL,
+    description varchar(5000),
+    image_url varchar(1000)
+ );
 
 INSERT INTO users (username,password_hash,role) VALUES ('user','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_USER');
 INSERT INTO users (username,password_hash,role) VALUES ('admin','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_ADMIN');
