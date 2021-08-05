@@ -14,8 +14,8 @@ public class BreweryJDBCDao implements BreweryDAO{
 
     private JdbcTemplate jdbcTemplate;
 
-    public BreweryJDBCDao( JdbcTemplate jdbcTemplate){
-        this.jdbcTemplate =jdbcTemplate;
+    public BreweryJDBCDao(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
 
     @Override
