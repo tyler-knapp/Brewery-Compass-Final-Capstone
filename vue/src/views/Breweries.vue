@@ -11,14 +11,14 @@
 
     </div>
       <brewery-list  class="brewery-list"/>
-    <!-- <beer-card class="beer-card" /> -->
+      <update-brewery />
 
   </div>
 </template>
 
 <script>
 import BreweryList from '@/components/BreweryList'
-//import BeerCard from '../components/BeerCard'
+import UpdateBrewery from '@/components/UpdateBrewery'
 
 export default {
   data(){
@@ -28,8 +28,8 @@ export default {
   },
     name: 'breweries',
     components: {
-       BreweryList
-       // BeerCard 
+       BreweryList, 
+       UpdateBrewery
        },
 }
 </script>

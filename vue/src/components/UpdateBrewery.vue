@@ -1,6 +1,10 @@
 <template>
   <form v-on:submit.prevent="updateBrewery">
     <div>
+      <label for="id">brewery Id</label>
+      <input type="number" v-model="id" />
+    </div>
+    <div>
       <label for="name">Name</label>
       <input type="text" v-model="name" />
     </div>
@@ -47,38 +51,49 @@ import breweryService from "../services/BreweryService";
 
 export default {
   name: "update-brewery",
-  props: ["breweryID"],
+  props: {
+    breweryID: {
+      type: Number,
+      default: 0
+    },
   data() {
     return {
-    address: "",
-    name: "",
-    state: "",
-    city: "",
-    zipCode: "",
-    phoneNumber: "",
-    websiteUrl: "",
-    imageUrl: "",
-    description: "",
+    brewery:{
+      id: 0,
+      address: "",
+      name: "",
+      state: "",
+      city: "",
+      zipCode: "",
+      phoneNumber: "",
+      websiteUrl: "",
+      imageUrl: "",
+      description: "",
+    }
+   
     };
   },
   methods: {
     updateBrewery() {
-      const brewery = { 
-          id: this.breweryID,
-          name: this.name,
-          state: this.state,
-          city: this.city,
-          zipCode: this.zipCode,
-          phoneNumber: this.phoneNumber,
-          websiteUrl: this.websiteUrl,
-          imageUrl: this.imageUrl,
-          description: this.description
+      const newBrewery = { 
+          id: this.brewery.id, 
+          name: this.brewery.name,
+          state: this.brewery.state,
+          address: this.brewery.address,
+          city: this.brewery.city,
+          zipCode: this.brewery.zipCode,
+          phoneNumber: this.brewery.phoneNumber,
+          websiteUrl: this.brewery.websiteUrl,
+          imageUrl: this.brewery.imageUrl,
+          description: this.brewery.description
         };
+      newBrewery.id = this.breweryID;
 
       breweryService
-        .updateBrewery(brewery)
+        .updateBrewery(newBrewery)
         .then((response) => {
           if (response.status === 200) {
+            alert("Brewery successfully updated");
             this.$router.push("/breweries");
           }
         })
@@ -103,25 +118,26 @@ export default {
     }
   },
   created() {
-    breweryService
-      .getBrewery(this.breweryID)
-      .then((response) => {
-        this.$store.commit("SET_ACTIVE_BREWERY", response.data);
-        this.name = response.data.name;
-        this.city = response.data.city;
-        this.state = response.data.state;
-        this.address = response.data.address;
-        this.zipCode = response.data.zipCode
-        this.websiteUrl = response.data.websiteUrl;
-        this.imageUrl = response.data.imageUrl;
-        this.phoneNumber = response.data.phoneNumber;
-        this.description = response.data.description;
-      })
-      .catch((error) => {
-        if (error.response.status == 404) {
-          this.$router.push("/not-found");
-        }
-      });
+    // breweryService
+    //   .getBrewery(this.breweryID)
+    //   .then((response) => {
+    //     this.$store.commit("SET_ACTIVE_BREWERY", response.data);
+    //     this.name = response.data.name;
+    //     this.city = response.data.city;
+    //     this.state = response.data.state;
+    //     this.address = response.data.address;
+    //     this.zipCode = response.data.zipCode
+    //     this.websiteUrl = response.data.websiteUrl;
+    //     this.imageUrl = response.data.imageUrl;
+    //     this.phoneNumber = response.data.phoneNumber;
+    //     this.description = response.data.description;
+    //   })
+    //   .catch((error) => {
+    //     if (error.response.status == 404) {
+    //       this.$router.push("/not-found");
+    //     }
+    //   });
+  }
   },
 };
 </script>
