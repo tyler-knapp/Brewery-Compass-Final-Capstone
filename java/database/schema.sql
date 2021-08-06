@@ -60,4 +60,22 @@ VALUES ('Punk IPA' , 2 , 'https://www.drinksandco.com/beer/brewdog-punk-ipa' );
 INSERT INTO beers (beer_name , brewery_id , beer_image )
 VALUES ('St George Amber Beer' , 3 , 'https://beerisdevine.com/wp-content/uploads/BGI-Ethiopia-St-George-Beer-678x381.jpg' );
 
+INSERT INTO beers (beer_name , brewery_id , beer_image )
+VALUES ('Einstok Icelandic White Ale' , 1 , 'https://halftimebeverage.com/einstok-icelandic-white-ale-12oz-can-18031' );
+
+INSERT INTO beers (beer_name , brewery_id , beer_image )
+VALUES ('Red Horse Beer' , 1 , 'https://halftimebeverage.com/san-miguel-red-horse-8003' );
+
+INSERT INTO beers (beer_name , brewery_id , beer_image )
+VALUES ('Rothaus Pils' , 2 , 'https://halftimebeverage.com/rothaus-pils-32680' );
+
+INSERT INTO beers (beer_name , brewery_id , beer_image )
+VALUES ('Colbitzer Schwarzbier' , 2 , 'https://halftimebeverage.com/colbitzer-schwarzbier-24169c-19454' );
+
+INSERT INTO beers (beer_name , brewery_id , beer_image )
+VALUES ('Guinness Nitro Coffee Brew', 3  , ' https://halftimebeverage.com/guinness-nitro-coffee-brew-34017.html ' );
+
+INSERT INTO beers (beer_name , brewery_id , beer_image )
+VALUES ('Dunkler Weizenbock Ale' , 3 , 'https://halftimebeverage.com/dunkler-weizenbock-26961.html' );
+
 COMMIT TRANSACTION;
