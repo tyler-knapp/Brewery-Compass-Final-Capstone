@@ -1,17 +1,27 @@
 <template>
   <div>
-    <info-card v-for="info in infoDisplay" v-bind:key="info.id" v-bind:info="info"/>
-    <input type="text" id="searchBar" />
+    <div>
+      <info-card id="infocard"
+        v-for="info in infoDisplay"
+        v-bind:key="info.id"
+        v-bind:info="info"
+      />
+    </div>
+
+    <form class="form" @submit.prevent="returnBreweries">
+      <input type="text" id="searchBar" v-model="info.city" />
+      <input type="submit" />
+    </form>
   </div>
 </template>
 
 <script>
 //import BreweryService from "@/services/BreweryService.js";
 import axios from "axios";
-import InfoCard from '@/components/InfoCard.vue'
+import InfoCard from "@/components/InfoCard.vue";
 export default {
-  components:{
-    InfoCard
+  components: {
+    InfoCard,
   },
   data() {
     return {
@@ -23,8 +33,9 @@ export default {
       return this.$store.state.info;
     },
     searchBrewery() {
+      const userInput = document.getElementById("searchBar").value;
       return axios.get(
-        "https://api.openbrewerydb.org/breweries?by_city=cleveland"
+        "https://api.openbrewerydb.org/breweries?by_city=" + userInput
       );
     },
   },
@@ -59,4 +70,10 @@ export default {
 </script>
 
 <style>
+
+#infocard{
+  border: 1px black solid;
+  border-radius: 10px;
+}
+
 </style>
