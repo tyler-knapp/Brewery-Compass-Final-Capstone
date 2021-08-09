@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface BreweryDAO {
 
-    List<Brewery> findAll();
+    List<Brewery> findAll(); //get all brewerys
 
-    Brewery getBrewery(int breweryId);
+    Brewery getBrewery(int breweryId); //get a brewery
 
     Brewery createBrewery(Brewery brewery);
 

@@ -17,8 +17,6 @@ export default {
 
     updateBrewery(brewery) {
         return axios.put(`/breweries/${brewery.id}`, brewery)
-    },
-    searchBrewery(){
-        return axios.get('https://api.openbrewerydb.org/breweries')
     }
+    
 }

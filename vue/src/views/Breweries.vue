@@ -1,44 +1,41 @@
 <template>
   <div>
     <div class="header">
-      <h1>
-        Brew Hopper
-      </h1>
-      <div class = "router">
-      <router-link v-bind:to="{ name: 'home' }">Home</router-link>&nbsp;|&nbsp;  
-      <router-link v-bind:to="{ name: 'AddBrewery' }">Add Brewery</router-link>
+      <h1>Brew Hopper</h1>
+      <div class="router">
+        <router-link v-bind:to="{ name: 'home' }">Home</router-link
+        >&nbsp;|&nbsp;
+        <router-link v-bind:to="{ name: 'AddBrewery' }"
+          >Add Brewery</router-link
+        >
       </div>
-
     </div>
-      <brewery-list  class="brewery-list"/>
+    <search-brewery class ="search"/>
+    <brewery-list class="brewery-list" />
     <!-- <beer-card class="beer-card" /> -->
-    <search-brewery/>
-
   </div>
 </template>
 
 <script>
-import BreweryList from '@/components/BreweryList'
-import SearchBrewery from '../components/SearchBrewery.vue'
+import BreweryList from "@/components/BreweryList";
+import SearchBrewery from "../components/SearchBrewery.vue";
 //import BeerCard from '../components/BeerCard'
 
 export default {
-  data(){
-    return{
-
-    }
+  data() {
+    return {};
   },
-    name: 'breweries',
-    components: {
-       BreweryList,
-        SearchBrewery
-       // BeerCard 
-       },
-}
+  name: "breweries",
+  components: {
+    BreweryList,
+    SearchBrewery,
+    // BeerCard
+  },
+};
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
 
 .header {
   top: 0;
@@ -49,7 +46,7 @@ export default {
   position: fixed;
   height: auto;
   width: 100%;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .header .router:hover {
@@ -57,22 +54,24 @@ export default {
   color: black;
 }
 
-.brew-title{
+.brew-title {
   text-align: center;
   margin-top: 220px;
 }
 
-.brewery-list{
-  padding-top: 300px;
+.brewery-list {
+  padding-top: 50px;
 }
 
-.router{
+.router {
   display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-
 }
 
+.search{
+  padding-top: 250px;
+}
 </style>
