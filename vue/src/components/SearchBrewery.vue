@@ -1,10 +1,6 @@
 <template>
   <div>
-<<<<<<< HEAD
-    <h1>{{ info }}</h1>
-    <input type="text" id="searchBar" />
-    <button class ="submit">submit</button>
-=======
+
     <div>
       <info-card id="infocard"
         v-for="info in infoDisplay"
@@ -17,7 +13,7 @@
       <input type="text" id="searchBar" v-model="info.city" />
       <input type="submit" />
     </form>
->>>>>>> 011e180b92cf162dc9da7d3de89e94977f5f3379
+
   </div>
 </template>
 
