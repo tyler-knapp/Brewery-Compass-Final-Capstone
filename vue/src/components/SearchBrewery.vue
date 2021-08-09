@@ -1,10 +1,12 @@
 <template>
   <div>
     <div>
-      <info-card id="infocard"
+      <info-card
+        id="infocard"
         v-for="info in infoDisplay"
         v-bind:key="info.id"
         v-bind:info="info"
+        v-bind:style="{ 'background-color': randomBackgroundColor() }"
       />
     </div>
 
@@ -59,6 +61,14 @@ export default {
           }
         });
     },
+    randomBackgroundColor() {
+      return "#" + this.generateHexCode();
+    },
+    generateHexCode() {
+      var bg = Math.floor(Math.random() * 16777215).toString(16);
+      if (bg.length !== 6) bg = this.generateHexCode();
+      return bg;
+    },
   },
 
   // Might make sense using a spread operator (maybe a for loop?) to get all of the objects instead of objects
@@ -70,10 +80,19 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 
-#infocard{
+#infocard {
   border: 1px black solid;
   border-radius: 10px;
+  padding-top: 20px;
+  margin: 30px;
+  text-align: center;
+  font-family: "Patua One", cursive;
+  box-shadow: 5px 10px 18px #888888
 }
 
+.form{
+  
+}
 </style>

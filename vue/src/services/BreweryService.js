@@ -16,7 +16,8 @@ export default {
     },
 
     updateBrewery(brewery) {
-        return axios.put(`/breweries/${brewery.id}`, brewery)
+        console.log(brewery.id, "update called")
+        return axios.put(`/breweries/${brewery.breweryId}`, brewery)
     }
     
 }
