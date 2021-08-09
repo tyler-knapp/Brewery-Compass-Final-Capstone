@@ -22,6 +22,7 @@ export default new Vuex.Store({
     user: currentUser || {},
     breweries: [] ,
     beers: [],
+    info:[],
     beer:{
       name:'',
       imageUrl:''
@@ -45,6 +46,9 @@ export default new Vuex.Store({
     },
     SET_BEERS(state, beers){
       state.beers = beers
+    },
+    SET_INFO(state, info){
+      state.info = info
     },
     SET_BEER(state, beer) {
       state.beer = beer
