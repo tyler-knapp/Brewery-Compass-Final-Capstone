@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <div>
       <info-card
         id="infocard"
@@ -14,6 +15,7 @@
       <input type="text" id="searchBar" v-model="info.city" />
       <input type="submit" />
     </form>
+
   </div>
 </template>
 
