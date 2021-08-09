@@ -2,6 +2,7 @@
   <div>
     <h1>{{ info }}</h1>
     <input type="text" id="searchBar" />
+    <button class ="submit">submit</button>
   </div>
 </template>
 
