@@ -6,6 +6,7 @@ public class Beer {
     private String name;
     private String abv;
     private String ibu;
+    private String style;
     private String beerDescription;
     private String imageUrl;
     private int breweryId;
@@ -14,7 +15,15 @@ public class Beer {
 
     }
 
-    public Beer(int beerId, String name, String imageUrl, int breweryId, String abv, String ibu, String beerDescription) {
+    public String getStyle() {
+        return style;
+    }
+
+    public void setStyle(String style) {
+        this.style = style;
+    }
+
+    public Beer(int beerId, String name, String imageUrl, int breweryId, String abv, String ibu, String beerDescription, String style) {
         this.beerId = beerId;
         this.name = name;
         this.imageUrl = imageUrl;
@@ -22,6 +31,7 @@ public class Beer {
         this.abv = abv;
         this.ibu = ibu;
         this.beerDescription = beerDescription;
+        this.style = style;
     }
 
     public String getAbv() {
