@@ -4,6 +4,7 @@
     <p>{{beer.abv}}</p>
     <p>{{beer.ibu}}</p>
     <p>{{beer.beerDescription}}</p>
+    <p>{{beer.style}}</p>
     <img v-bind:src="beer.imageUrl">
     <beer-info />
   </div>

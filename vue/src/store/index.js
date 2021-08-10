@@ -28,6 +28,8 @@ export default new Vuex.Store({
       imageUrl:'',
       abv:'',
       ibu: '',
+      style: '',
+      breweryId: 0,
       beerDescription:''
     }
   },
