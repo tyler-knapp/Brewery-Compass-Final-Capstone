@@ -12,17 +12,17 @@
 import beerService from "../services/BeerService";
 
 export default {
-  props: ["beer"],
   name: "beer-detail",
   data() {
     return {
-      // beer: {
-      //   name: "",
-      //   imageUrl: "",
-      //   abv: "",
-      //   ibu: "",
-      //   beerDesciption: ""
-      // },
+      beer: {
+        name: "",
+        imageUrl: "",
+        abv: "",
+        ibu: "",
+        beerDesciption: "",
+        
+      },
     };
   },
 
