@@ -1,5 +1,11 @@
 <template>
   <div>
+    
+    <form class="form" id="SearchLocation" @submit.prevent="returnBreweries">
+      <h2>Search By City</h2>
+      <input type="text" id="searchBar" v-model="info.city" />
+      <input type="submit" />
+    </form>
 
     <div>
       <info-card
@@ -10,12 +16,6 @@
         v-bind:style="{ 'background-color': randomBackgroundColor() }"
       />
     </div>
-
-    <form class="form" @submit.prevent="returnBreweries">
-      <input type="text" id="searchBar" v-model="info.city" />
-      <input type="submit" />
-    </form>
-
   </div>
 </template>
 
@@ -91,7 +91,11 @@ export default {
   margin: 30px;
   text-align: center;
   font-family: "Patua One", cursive;
-  box-shadow: 5px 10px 18px #888888
+  box-shadow: 5px 10px 18px #888888;
+}
+
+#SearchLocation {
+  text-align: center;
 }
 
 </style>
