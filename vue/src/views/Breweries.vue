@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header">
-      <h1>Brew Hopper</h1>
+      <h1 id="title">Brew Hopper</h1>
       <div class="router">
         <router-link v-bind:to="{ name: 'home' }">Home</router-link
         >&nbsp;|&nbsp;
@@ -39,14 +39,19 @@ export default {
 
 .header {
   top: 0;
-  text-align: center;
   background-color: rgb(113, 224, 191);
-  color: white;
-  font-size: 28px;
   position: fixed;
-  height: auto;
+  font-size: 28px;
+  height: 75px;
   width: 100%;
   font-family: "Raleway", sans-serif;
+}
+
+#title{
+  color: white;
+  font-size: 22px;
+  position: fixed;
+
 }
 
 .header .router:hover {
@@ -72,6 +77,6 @@ export default {
 }
 
 .search{
-  padding-top: 250px;
+  padding-top: 100px;
 }
 </style>

@@ -25,7 +25,10 @@ export default new Vuex.Store({
     info:[],
     beer:{
       name:'',
-      imageUrl:''
+      imageUrl:'',
+      abv:'',
+      ibu: '',
+      beerDescription:''
     }
   },
   // activeBrewery: {
