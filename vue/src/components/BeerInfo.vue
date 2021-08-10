@@ -1,6 +1,10 @@
 <template>
   <div>
     <h1 class="title">{{ beer.name }}</h1>
+    <p>{{beer.abv}}</p>
+    <p>{{beer.ibu}}</p>
+    <p>{{beer.beerDescription}}</p>
+    <p>{{beer.style}}</p>
     <img class="image" v-bind:src="beer.imageUrl" />
   </div>
 </template>
@@ -15,6 +19,10 @@ export default {
       beer: {
         name: "",
         imageUrl: "",
+        abv: "",
+        ibu: "",
+        beerDescription: "",
+        style:""
       },
     };
   },

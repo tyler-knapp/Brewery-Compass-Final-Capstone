@@ -11,7 +11,8 @@ import NotFound from '../views/NotFound.vue'
 import EditBrewery from '../views/EditBrewery.vue'
 import NewBreweryForm from '../views/NewBreweryForm.vue'
 import BeerDetail from '../views/BeerDetail.vue'
- 
+import NewBeerForm from '../views/NewBeerForm.vue'
+
 
 
 
@@ -110,7 +111,16 @@ const router = new Router({
        meta: {
          requiresAuth: false
        }
-     }
+     },
+     
+    {
+      path: '/add-beer',
+      name: 'AddBeer',
+      component: NewBeerForm ,
+      meta: {
+        requiresAuth: false
+      }
+    },
 
 
   ]
