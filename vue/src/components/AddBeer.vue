@@ -39,7 +39,7 @@ export default {
   },
   methods:{
       addBeer(){
-          BeerService.addBeer(this.beer,).then((response) => {
+          BeerService.addBeer(this.beer).then((response) => {
         if (response.status === 200) {
           alert("Beer successful added");
           this.$router.push('/breweries');

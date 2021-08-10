@@ -114,8 +114,7 @@ export default {
   },
   methods: {
     addBrewery() {
-      let breweryId = this.$route.params.breweryID;
-      breweryService.createBrewery(breweryId, this.brewery).then((response) => {
+      breweryService.createBrewery(this.brewery).then((response) => {
         if (response.status === 200) {
           alert("Brewery successful added");
           this.$router.push('/breweries');

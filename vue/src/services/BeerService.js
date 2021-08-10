@@ -8,8 +8,8 @@ export default {
     getBeer(beerID, breweryID) {
         return axios.get(`/breweries/${breweryID}/beers/${beerID}`)
     },
-    addBeer(beer, breweryID){
-        return axios.post(`/breweries/${breweryID}/beers`, beer)
+    addBeer(beer){
+        return axios.post(`/breweries/${beer.breweryId}/beers`, beer)
 
     }
 
