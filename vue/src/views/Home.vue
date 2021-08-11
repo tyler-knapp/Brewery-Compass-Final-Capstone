@@ -6,21 +6,23 @@
     <div class="OverTwentyOne">
       <p class="question">Hey YOU!...Are you over the age of 21?</p>
       <div id="buttons">
-        <a href="#" class="btn blue">YES! LEMME IN!</a>
-        <a href="#" class="btn red">No. I'm too young:(</a>
+        <router-link
+          class="btn blue"
+          id="Brewery"
+          v-bind:to="{ name: 'breweries' }"
+          >YES! LEMME IN!</router-link
+        >
+        <router-link class="btn red" id="LogOut" v-bind:to="{ name: 'logout' }"
+          >No. I'm too young:(</router-link
+        >
       </div>
     </div>
-    <Map />
   </div>
 </template>
 
 <script>
-import Map from '@/components/Map'
 export default {
   name: "home",
-  components: {
-    Map
-  }
 };
 </script>
 
@@ -29,7 +31,7 @@ export default {
 
 .OverTwentyOne {
   border: solid rgb(250, 146, 60) 10px;
-  font-family: 'Open Sans', 'sans-serif';
+  font-family: "Open Sans", "sans-serif";
   border-radius: 50px;
   margin-top: 100px;
   font-size: 33px;
@@ -41,24 +43,26 @@ export default {
   text-align: center;
   background-color: rgb(201, 225, 247);
 }
+router-link{
+  font-family: 'Open Sans', 'sans-serif';
+}
 
 .question {
   font-weight: bold;
-  font-family: 'Open Sans', 'sans-serif';
+  font-family: "Open Sans", "sans-serif";
   padding-top: 3%;
   color: rgb(72, 88, 102);
-}
-
-.enjoy {
 }
 
 #buttons {
   padding-top: 25px;
   text-align: center;
+  font-family: "Open Sans", "sans-serif";
 }
 
 .btn {
   border-radius: 5px;
+  font-family: "Open Sans", "sans-serif";
   padding: 15px 25px;
   font-size: 22px;
   text-decoration: none;

@@ -1,12 +1,14 @@
 <template>
   <div>
     <search-brewery class ="search"/>
+     <Map />
     <brewery-list class="brewery-list" />
     <!-- <beer-card class="beer-card" /> -->
   </div>
 </template>
 
 <script>
+import Map from'@/components/Map'
 import BreweryList from "@/components/BreweryList";
 import SearchBrewery from "../components/SearchBrewery.vue";
 //import BeerCard from '../components/BeerCard'
@@ -19,6 +21,7 @@ export default {
   components: {
     BreweryList,
     SearchBrewery,
+    Map
     // BeerCard
   },
 };

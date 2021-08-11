@@ -1,26 +1,22 @@
 <template>
   <div>
-    <Map />
     <brewery-card
       v-for="brewery in display"
       v-bind:key="brewery.id"
       v-bind:brewery="brewery"
       v-bind:style="{ 'background-color':randomBackgroundColor() }"
     />
-    
   </div>
 
 </template>
 
 <script>
-import Map from '@/components/Map'
 import BreweryCard from "@/components/BreweryCard";
 import breweryService from "@/services/BreweryService";
 
 export default {
   components: {
     BreweryCard,
-    Map
   },
   data() {
     return {
