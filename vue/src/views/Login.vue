@@ -28,9 +28,11 @@
         id="password"
         class="form-control"
         placeholder="Password"
+        
         v-model="user.password"
         required
       />
+      <i class="fas fa-arrow-right"></i>
       <router-link :to="{ name: 'register' }">Need an account?</router-link>
       <button type="submit">Sign in</button>
     </form>
