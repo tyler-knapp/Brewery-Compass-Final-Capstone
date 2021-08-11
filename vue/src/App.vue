@@ -22,29 +22,41 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Quattrocento:wght@700&display=swap');
 
-#Home {
-  color: rgba(16, 16, 77, 0.938);
-   text-decoration: none;
-   font-size: 32px;
-   font-weight: bold;
-   font-family: 'Josefin Sans', sans-serif;
-   padding-right: 5%;
-}
+
 
 #Home:hover {
   color: rgb(224, 222, 222);
+  text-decoration: underline ;
 }
 
 #Brewery:hover {
   color: rgb(224, 222, 222);
+  text-decoration: underline ;
 }
 
 #Add-Brewery:hover {
   color: rgb(224, 222, 222);
+  text-decoration: underline ;
 }
 
 #Add-Beer:hover {
   color: rgb(224, 222, 222);
+  text-decoration: underline ;
+}
+
+#Logout:hover {
+  color: rgb(224, 222, 222);
+  text-decoration: underline ;
+}
+
+#Home {
+  color: rgba(16, 16, 77, 0.938);
+   text-decoration: none;
+   font-size: 32px;
+   padding-top: 0px;
+   font-weight: bold;
+   font-family: 'Josefin Sans', sans-serif;
+   padding-right: 5%;
 }
 
 #Brewery {
@@ -70,6 +82,7 @@
    text-decoration: none;
    font-size: 32px;
    font-weight: bold;
+   padding-right: 5%;
    font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -77,17 +90,21 @@
    color: #6e9bbb;
    text-shadow: 3px 3px rgba(16, 16, 77, 0.938);
    text-decoration: none;
-   font-size: 54px;
+   font-size: 45px;
+   margin-top: 0.5%;
    font-weight: bold;
    font-family: 'Josefin Sans', sans-serif;
    text-align: center;
 }
 
-/* #Logout {
+ #Logout {
   color: rgba(16, 16, 77, 0.938);
    text-decoration: none;
-   font-size: 20px;
-} */
+   font-size: 32px;
+   font-weight: bold;
+   font-family: 'Josefin Sans', sans-serif;
+   padding-right: 5%;
+} 
 
 
 .siteHeader {
@@ -95,7 +112,7 @@
   top: 0;
   width: 99%;
   height: 22%;
-  background-color: rgb(224, 120, 60);
+  background-color: rgb(247, 145, 86);
   color: rgba(16, 16, 77, 0.938);
   text-align: center;
   font-size: 16px;
@@ -103,7 +120,6 @@
 }
 
 .routerLinks {
-  text-decoration: none;
   margin-top: 2%
 }
 
