@@ -8,7 +8,6 @@
       <div id="buttons">
         <router-link
           class="btn blue"
-          id="Brewery"
           v-bind:to="{ name: 'breweries' }"
           >YES! LEMME IN!</router-link
         >

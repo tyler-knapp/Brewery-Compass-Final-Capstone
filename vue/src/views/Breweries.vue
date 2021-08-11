@@ -1,8 +1,9 @@
 <template>
   <div>
     <search-brewery class ="search"/>
-     <Map />
+     
     <brewery-list class="brewery-list" />
+    <Map />
     <!-- <beer-card class="beer-card" /> -->
   </div>
 </template>
@@ -39,19 +40,14 @@ export default {
   font-family: "Raleway", sans-serif;
 }
 
-.header .router:hover {
-  background: rgb(91, 180, 74);
-  color: black;
-}
-
 .brew-title {
   text-align: center;
   margin-top: 220px;
 }
-
+/* 
 .brewery-list {
   padding-top: 50px;
-}
+} */
 
 .router {
   display: block;
@@ -61,7 +57,4 @@ export default {
   text-decoration: none;
 }
 
-.search{
-  padding-top: 20px;
-}
 </style>

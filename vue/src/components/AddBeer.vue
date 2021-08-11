@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 class="add-title">Add a Beer to Your Brewery</h1>
     <form class="form" @submit.prevent="createBeer">
       <div>
         <label for="name"> Name</label>
@@ -57,4 +58,7 @@ export default {
 </script>
 
 <style>
+.add-title{
+  padding-top: 155px;
+}
 </style>

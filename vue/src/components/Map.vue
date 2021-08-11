@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div
-      style="display: flex; align-items: center; justify-content: space-between"
+    <div class ="container"
+      style="display: flex; align-items: center; justify-content: space-evenly"
     >
       <div>
         <h1>Your Coordinates:</h1>
@@ -16,6 +16,7 @@
         </p>
       </div>
     </div>
+<div class="map-container">
 
     <GmapMap
       :center="myCoordinates"
@@ -33,6 +34,9 @@
     @click="center=m.position"
   />
     </GmapMap>
+
+</div>
+
   </div>
 </template>
 <script>
@@ -99,3 +103,23 @@ export default {
   },
 };
 </script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Quattrocento:wght@700&display=swap');
+
+
+h1{
+     font-family: 'Josefin Sans', sans-serif;
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.container{
+  border: solid black 1px;
+  border-radius: 10px;
+  background: #ffb703;
+}
+
+
+</style>
