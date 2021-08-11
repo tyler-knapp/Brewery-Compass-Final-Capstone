@@ -12,7 +12,7 @@ import EditBrewery from '../views/EditBrewery.vue'
 import NewBreweryForm from '../views/NewBreweryForm.vue'
 import BeerDetail from '../views/BeerDetail.vue'
 import NewBeerForm from '../views/NewBeerForm.vue'
-//import  {auth}  from '../services/Firebase.js'  
+
 
 
 
@@ -50,7 +50,7 @@ const router = new Router({
     {
       path: "/login",
       name: "login",
-      component: Login, 
+      component: Login,
       meta: {
         requiresAuth: false 
   
@@ -138,5 +138,9 @@ router.beforeEach((to, from, next) => {
     next();
   }
 });
+
+
+
+
 
 export default router;

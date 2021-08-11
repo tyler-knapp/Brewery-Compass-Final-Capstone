@@ -98,15 +98,24 @@
         <label for="description">Description:</label>
         <input style="height:120px;font-size:12pt;" type="text" id="description" v-model="brewery.description"  />
       </div>
+       <upload/>
       <input type="submit" />
     </form>
+   
   </div>
 </template>
 
 <script>
 import breweryService from "@/services/BreweryService";
+import Upload from '../components/Upload.vue'
+
+
+
 export default {
   name: "add-brewery",
+  components: {
+    Upload
+  },
   data() {
     return {
       brewery: {},
