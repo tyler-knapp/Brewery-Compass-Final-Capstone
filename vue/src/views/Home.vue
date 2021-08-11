@@ -10,12 +10,17 @@
         <a href="#" class="btn red">No. I'm too young:(</a>
       </div>
     </div>
+    <Map />
   </div>
 </template>
 
 <script>
+import Map from '@/components/Map'
 export default {
   name: "home",
+  components: {
+    Map
+  }
 };
 </script>
 
