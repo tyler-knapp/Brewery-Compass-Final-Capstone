@@ -1,12 +1,15 @@
 <template>
   <div id="breweryCard" v-on:click="goToBreweryPage" >
     <h1 class="name">{{ brewery.name }}</h1>
-    <img class="cardimage" v-bind:src="brewery.imageUrl" >
+    <!-- <img class="preview" v-bind:src="picture" > -->
+    
   </div>
 </template>
 
 <script>
+
 export default {
+  
   props: ["brewery"],
   methods: {
     goToBreweryPage(){

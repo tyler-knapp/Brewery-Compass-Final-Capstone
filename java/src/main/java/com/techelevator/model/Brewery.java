@@ -10,14 +10,13 @@ public class Brewery {
     private String zipCode;
     private String phoneNumber;
     private String websiteUrl;
-    private String imageUrl;
     private String description;
 
     public Brewery() {
 
     }
 
-    public Brewery(int breweryId, String name, String state, String city, String address, String zipCode, String phoneNumber, String websiteUrl, String description, String imageUrl){
+    public Brewery(int breweryId, String name, String state, String city, String address, String zipCode, String phoneNumber, String websiteUrl, String description){
         this.breweryId = breweryId;
         this.name = name;
         this.description = description;
@@ -27,7 +26,6 @@ public class Brewery {
         this.phoneNumber = phoneNumber;
         this.websiteUrl = websiteUrl;
         this.zipCode = zipCode;
-        this.imageUrl = imageUrl;
     }
 
     public String getState() {
@@ -76,14 +74,6 @@ public class Brewery {
 
     public void setWebsiteUrl(String websiteUrl) {
         this.websiteUrl = websiteUrl;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
     }
 
     public int getBreweryId() {

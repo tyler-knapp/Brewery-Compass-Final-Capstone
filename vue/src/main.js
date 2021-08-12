@@ -3,7 +3,8 @@ import App from './App.vue'
 import router from './router/index'
 import store from './store/index'
 import axios from 'axios'
-import firebase from 'firebase'
+import firebase from 'firebase';
+
 
 
 

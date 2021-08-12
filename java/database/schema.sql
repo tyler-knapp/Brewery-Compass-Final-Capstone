@@ -31,16 +31,16 @@ CREATE TABLE breweries (
     brewery_zip_code varchar(30) NOT NULL,
     brewery_phone_number varchar (15) NOT NULL,
     brewery_website_url varchar(1000) NOT NULL,
-    description varchar(5000),
-    image_url varchar(1000)
+    description varchar(5000)
+
  );
 
 INSERT INTO users (username,password_hash,role) VALUES ('user','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_USER');
 INSERT INTO users (username,password_hash,role) VALUES ('admin','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_ADMIN');
 
-INSERT INTO breweries (brewery_name, brewery_state, brewery_city, brewery_address, brewery_zip_code, brewery_phone_number, brewery_website_url, description, image_url) VALUES ('10 Barrel Brewing Co', 'OR', 'Bend', '1135 NW Galveston Ave Ste B', '97703', '(541) 585-1007', 'www.10barrel.com', 'Started Back in 2006 with three guys in Bend Oregon. Committed to great beer taste, good vibes, and a lifetime of adventure', 'https://10barrel.com/wp-content/uploads/2016/05/Pub_Portland_Header.jpg');
-INSERT INTO breweries (brewery_name, brewery_state, brewery_city, brewery_address, brewery_zip_code, brewery_phone_number, brewery_website_url, description, image_url) VALUES ('BrewDog Brewing Company, LLC', 'OH', 'Canal Winchester', '96 Gender Rd', '43110', '(614) 908-3051', 'http://www.brewdog.com/usa', 'BrewDog was born with the aim to revolutionize the beer industry and completely redefine beer-drinking culture. We’re determined to make a stand for independence, a stand for quality and stand for craft.', 'https://www.brewdog.com/images/cms/blog/1534839878BLOG1.jpg');
-INSERT INTO breweries (brewery_name, brewery_state, brewery_city, brewery_address, brewery_zip_code, brewery_phone_number, brewery_website_url, description, image_url) VALUES ('Homestead Beer Co.', 'OH', 'Heath', '811 Irving Wick Dr W', '43056', '(740) 522-8018', 'www.homesteadbeerco.com',  'Enjoy the flavors of Ohio through our lifelong committment to excellence. On the Homestead-- We know beer.', 'https://untappd.akamaized.net/site/brewery_logos_hd/brewery-9935_12ab5_hd.jpeg');
+INSERT INTO breweries (brewery_name, brewery_state, brewery_city, brewery_address, brewery_zip_code, brewery_phone_number, brewery_website_url, description) VALUES ('10 Barrel Brewing Co', 'OR', 'Bend', '1135 NW Galveston Ave Ste B', '97703', '(541) 585-1007', 'www.10barrel.com', 'Started Back in 2006 with three guys in Bend Oregon. Committed to great beer taste, good vibes, and a lifetime of adventure');
+INSERT INTO breweries (brewery_name, brewery_state, brewery_city, brewery_address, brewery_zip_code, brewery_phone_number, brewery_website_url, description) VALUES ('BrewDog Brewing Company, LLC', 'OH', 'Canal Winchester', '96 Gender Rd', '43110', '(614) 908-3051', 'http://www.brewdog.com/usa', 'BrewDog was born with the aim to revolutionize the beer industry and completely redefine beer-drinking culture. We’re determined to make a stand for independence, a stand for quality and stand for craft.');
+INSERT INTO breweries (brewery_name, brewery_state, brewery_city, brewery_address, brewery_zip_code, brewery_phone_number, brewery_website_url, description) VALUES ('Homestead Beer Co.', 'OH', 'Heath', '811 Irving Wick Dr W', '43056', '(740) 522-8018', 'www.homesteadbeerco.com',  'Enjoy the flavors of Ohio through our lifelong committment to excellence. On the Homestead-- We know beer.');
 
 CREATE TABLE beers (
 beer_id serial primary key,

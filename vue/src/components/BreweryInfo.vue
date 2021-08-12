@@ -2,7 +2,7 @@
   <div>
       <h1 class = "title" >{{brewery.name}}</h1>
       <h3 class = "description">{{brewery.description}}</h3>
-       <img class = "image" v-bind:src="brewery.imageUrl"  >
+       <img class = "preview" v-bind:src="picture"  >
         <h4>{{brewery.address}}</h4>
       <h4 class="location">{{brewery.city}}, {{ brewery.state }}, {{brewery.zipCode}}</h4>
       <h4>{{brewery.phoneNumber}}</h4>
@@ -10,13 +10,16 @@
       <div>
       <router-link :to="{ name: 'breweries'}">Back to Brewery List</router-link>
     </div>
+    <upload/>
   </div>
 </template>
 
 <script>
 import breweryService from "../services/BreweryService";
+import Upload from './Upload.vue';
 
 export default {
+  components: { Upload },
   name: "breweries-detail",
   data() {
     return {

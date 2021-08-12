@@ -32,20 +32,28 @@
       <label for="websiteUrl">Website Url</label>
       <input type="text" v-model="websiteUrl" />
     </div>
-    <div>
-      <label for="imageUrl">Image Url</label>
-      <input type="text" v-model="imageUrl" />
-    </div>
+     <!-- <div>
+   <input id="fileUpload" type="file" hidden>
+    <button @click="chooseFiles()">Choose</button>
+    </div>  -->
     <div class="actions">
       <button type="submit">Save Document</button>
     </div>
+      <upload/>
   </form>
+
 </template>
 
 <script>
 import breweryService from "../services/BreweryService";
+import Upload from "@/components/Upload.vue";
+
 
 export default {
+   components: {
+    Upload
+      
+  },
   name: "update-brewery",
   props: ['breweryID'],
   data() {
@@ -105,6 +113,9 @@ export default {
       }
     },
   },
+    chooseFiles() {
+        document.getElementById("fileUpload").click()
+    }
   // created() {
   //   if (this.breweryID != 0) {
   //     breweryService

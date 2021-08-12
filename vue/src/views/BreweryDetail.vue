@@ -12,6 +12,7 @@ import BeerCard from '@/components/BeerCard.vue';
 import beerService from '@/services/BeerService'
 import UpdateBrewery from '@/components/UpdateBrewery.vue'
 
+
 export default {
   components: {
     BreweryInfo,

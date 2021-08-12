@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import firebase from "firebase";
+import firebase from 'firebase';
 
 export default {
   name: "Upload",
@@ -28,7 +28,7 @@ export default {
     return {
       imageData: null,
       picture: null,
-      uploadValue: 0,
+       uploadValue: 0,
     }
   },
 
@@ -60,7 +60,12 @@ export default {
           );
         }
 }
+
+
 }
+
+
+
 
 
       
