@@ -45,26 +45,12 @@ public class BeerJDBCDAO implements BeerDAO {
         return beer;
     }
 
-    @Override
-    public Beer createBeer(Beer beer) {
-        String sql ="INSERT INTO beers (beer_id, beer_abv, beer_ibu, beer_style, beer_description, beer_name , brewery_id , beer_image )" +
-                "VALUES (DEFAULT, ?,?,?,?,?,?,?)" +
-                "RETURNING beer_id";
-        int id = jdbcTemplate.queryForObject(sql,Integer.class, beer.getAbv(),beer.getIbu(), beer.getStyle(),beer.getBeerDescription(),beer.getName(),beer.getBreweryId(),beer.getImageUrl());
-    beer.setBeerId(id);
-        return beer;
-    }
-
     private Beer mapRowToBeer(SqlRowSet rs){
         Beer beer = new Beer();
         beer.setBeerId(rs.getInt("beer_id"));
         beer.setName(rs.getString("beer_name"));
-        beer.setAbv(rs.getString("beer_abv"));
-        beer.setIbu(rs.getString("beer_ibu"));
-        beer.setBeerDescription(rs.getString("beer_description"));
         beer.setImageUrl(rs.getString("beer_image"));
         beer.setBreweryId(rs.getInt("brewery_id"));
-        beer.setStyle(rs.getString("beer_style"));
         return beer;
     }
 }

@@ -50,8 +50,8 @@ public class BreweryJDBCDao implements BreweryDAO{
     @Override
     public Brewery createBrewery(Brewery brewery) {
 
-        String sql = "INSERT INTO breweries (brewery_id, brewery_name, brewery_state, brewery_city, brewery_address, brewery_zip_code, brewery_phone_number, brewery_website_url, description) VALUES (DEFAULT, ?, ?, ?, ?,?, ?, ?, ?) RETURNING brewery_id";
-        int id = jdbcTemplate.queryForObject(sql, Integer.class, brewery.getName(), brewery.getState(), brewery.getCity(), brewery.getAddress(), brewery.getZipCode(), brewery.getPhoneNumber(), brewery.getWebsiteUrl(), brewery.getDescription());
+        String sql = "INSERT INTO breweries (brewery_id, brewery_name, brewery_state, brewery_city, brewery_address, brewery_zip_code, brewery_phone_number, brewery_website_url, description, image_url) VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING brewery_id";
+        int id = jdbcTemplate.queryForObject(sql, Integer.class, brewery.getName(), brewery.getState(), brewery.getCity(), brewery.getAddress(), brewery.getZipCode(), brewery.getPhoneNumber(), brewery.getWebsiteUrl(), brewery.getDescription(), brewery.getImageUrl());
         brewery.setBreweryId(id);
 
         return brewery;
@@ -60,10 +60,10 @@ public class BreweryJDBCDao implements BreweryDAO{
     @Override
     public void update(Brewery brewery) {
         String sql = "UPDATE breweries SET brewery_name = ?, brewery_state = ?, brewery_city = ?, brewery_address = ?, " +
-                "brewery_zip_code = ?, brewery_phone_number = ?, brewery_website_url = ?, description = ? " +
+                "brewery_zip_code = ?, brewery_phone_number = ?, brewery_website_url = ?, description = ?, image_url = ? " +
                 "WHERE brewery_id = ?";
         jdbcTemplate.update(sql, brewery.getName(), brewery.getState(), brewery.getCity(), brewery.getAddress(), brewery.getZipCode(),
-                brewery.getPhoneNumber(), brewery.getWebsiteUrl(), brewery.getDescription(), brewery.getBreweryId());
+                brewery.getPhoneNumber(), brewery.getWebsiteUrl(), brewery.getDescription(), brewery.getImageUrl(), brewery.getBreweryId());
     }
 
     private Brewery mapRowToBrewery(SqlRowSet rs){
@@ -77,6 +77,7 @@ public class BreweryJDBCDao implements BreweryDAO{
         brewery.setZipCode(rs.getString("brewery_zip_code"));
         brewery.setPhoneNumber(rs.getString("brewery_phone_number"));
         brewery.setWebsiteUrl(rs.getString("brewery_website_url"));
+        brewery.setImageUrl(rs.getString("image_url"));
         return brewery;
     }
 }

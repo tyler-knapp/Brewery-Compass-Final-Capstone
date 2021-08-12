@@ -4,7 +4,6 @@ package com.techelevator.controller;
 import com.techelevator.NotFoundException.BeerNotFoundException;
 import com.techelevator.dao.BeerDAO;
 import com.techelevator.model.Beer;
-import com.techelevator.model.Brewery;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,9 +26,5 @@ public class BeerController {
     @RequestMapping (path = "/breweries/{breweryId}/beers/{beerId}", method = RequestMethod.GET)
     public Beer retrieve(@PathVariable (name = "breweryId") Integer breweryId, @PathVariable (name = "beerId") Integer beerId) throws BeerNotFoundException {
         return beerDAO.getBeerInfoByBeerId(breweryId, beerId);
-    }
-    @RequestMapping(path="/breweries/{id}/beers", method= RequestMethod.POST)
-    public Beer addBeer (@PathVariable(name = "id") Integer id, @RequestBody Beer beer ) {
-        return beerDAO.createBeer(beer);
     }
     }
