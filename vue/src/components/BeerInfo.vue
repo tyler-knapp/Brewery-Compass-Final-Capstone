@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="title">{{ beer.name }}</h1>
+    <h1 class="b-title">{{ beer.name }}</h1>
     <p>{{beer.abv}}</p>
     <p>{{beer.ibu}}</p>
     <p>{{beer.beerDescription}}</p>
@@ -55,4 +55,7 @@ computed: {
 </script>
 
 <style>
+.b-title{
+  font-size: 1000px;
+}
 </style>

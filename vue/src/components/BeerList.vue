@@ -4,7 +4,6 @@
       v-for="beer in beerDisplay"
       v-bind:key="beer.id"
       v-bind:beer="beer"
-      v-bind:style="{ 'background-color': backgroundColorScheme() }"
     />
 
     <brewery-list />
@@ -58,23 +57,7 @@ export default {
           }
         });
     },
-    shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-    },
-
-    backgroundColorScheme() {
-      var colorArray = [
-        "rgba(167, 136, 155, 0.795)",
-        "#72a0c1",
-        "rgb(202, 148, 116)",
-        "#f0dcd6",
-      ];
-      this.shuffle(colorArray);
-      return colorArray;
-    },
+    
   },
   created() {
     this.getAllBeers();
