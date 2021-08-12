@@ -90,10 +90,14 @@
           
         />
       </div>
-       <div>
+      <div>
+-        <label for="imageurl">Image Url:</label>
+-        <input type="url" id="imageurl" v-model="brewery.imageUrl" />
+-      </div>
+       <!-- <div>
    <input id="fileUpload" type="file" hidden>
     <button @click="chooseFiles()">Choose</button>
-    </div> 
+    </div>  -->
       <div>
         <label for="description">Description:</label>
         <input style="height:120px;font-size:12pt;" type="text" id="description" v-model="brewery.description"  />

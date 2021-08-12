@@ -1,8 +1,10 @@
 <template>
   <div id="breweryDetail">
     <brewery-info />
-    <update-brewery />
+    
     <beer-card v-for="beer in beers" v-bind:key="beer.id" v-bind:beer = "beer"/>
+    <h2 class="update-title">Update Brewery</h2>
+ <update-brewery />
   </div>
 </template>
 
@@ -36,4 +38,12 @@ export default {
 </script>
 
 <style>
+
+.update-title{
+  margin-bottom:-100px;
+  font-size: 44px;
+  text-align: center;
+  font-family: 'Patua One', cursive;
+}
+
 </style>

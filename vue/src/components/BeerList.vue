@@ -1,40 +1,42 @@
 <template>
   <div>
-    <beer-card v-for="beer in beerDisplay"
-     v-bind:key="beer.id"
-     v-bind:beer="beer" />
-     <brewery-list/>
+    <beer-card
+      v-for="beer in beerDisplay"
+      v-bind:key="beer.id"
+      v-bind:beer="beer"
+      v-bind:style="{ 'background-color': backgroundColorScheme() }"
+    />
+
+    <brewery-list />
   </div>
 </template>
 
 <script>
-import BeerService from '../services/BeerService';
-import BeerCard from '../BeerCard.vue'
-import BreweryList from '../BreweryList.vue';
+import BeerService from "../services/BeerService";
+import BeerCard from "../BeerCard.vue";
+import BreweryList from "../BreweryList.vue";
 
 export default {
   components: {
     BeerCard,
-    BreweryList
-
+    BreweryList,
   },
-  data(){
-      return{
-          name:'',
-          breweryID: 0
-      }
+  data() {
+    return {
+      name: "",
+      breweryID: 0,
+    };
   },
 
-computed: {
+  computed: {
     beerDisplay() {
       return this.$store.state.beers;
-    }
+    },
   },
 
- methods: {
+  methods: {
     getAllBeers() {
-        BeerService
-       .getAllBeersByBreweryId(breweryID) 
+      BeerService.getAllBeersByBreweryId(breweryID)
         .then((response) => {
           this.$store.commit("SET_BEERS", response.data);
           this.isLoading = false;
@@ -54,13 +56,29 @@ computed: {
           else {
             console.error("Unexpected Axios error");
           }
-        
         });
-    }
     },
-    created() {
+    shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    },
+
+    backgroundColorScheme() {
+      var colorArray = [
+        "rgba(167, 136, 155, 0.795)",
+        "#72a0c1",
+        "rgb(202, 148, 116)",
+        "#f0dcd6",
+      ];
+      this.shuffle(colorArray);
+      return colorArray;
+    },
+  },
+  created() {
     this.getAllBeers();
-  }
- }
+  },
+};
 </script>
 
