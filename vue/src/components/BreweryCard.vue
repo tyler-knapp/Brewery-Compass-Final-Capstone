@@ -1,7 +1,7 @@
 <template>
   <div id="breweryCard" v-on:click="goToBreweryPage" >
     <h1 class="name">{{ brewery.name }}</h1>
-    <!-- <img class="preview" v-bind:src="picture" > -->
+    <img class="cardimage" v-bind:src="brewery.imageUrl" > 
     
   </div>
 </template>

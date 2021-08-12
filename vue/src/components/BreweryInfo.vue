@@ -14,16 +14,16 @@
         >Back to Brewery List</router-link
       >
     </div>
-    <upload/>
+    <!-- <upload/> -->
   </div>
 </template>
 
 <script>
 import breweryService from "../services/BreweryService";
-import Upload from './Upload.vue';
+// import Upload from './Upload.vue';
 
 export default {
-  components: { Upload },
+  // components: { Upload },
   name: "breweries-detail",
   data() {
     return {
