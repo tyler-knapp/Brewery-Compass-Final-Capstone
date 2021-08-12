@@ -82,7 +82,7 @@ export default {
 } */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Quattrocento:wght@700&display=swap');
 form {
-  margin-top: 100px;
+  margin-top: 150px;
   border: solid black 1px;
   margin-right: 35%;
   margin-left: 35%;
