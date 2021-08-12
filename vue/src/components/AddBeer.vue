@@ -30,6 +30,7 @@
         <label for="beerImage">Image URL:</label>
         <input type="URL" id="image" v-model="beer.imageUrl"/>
       </div>
+      <upload/>
       <input type="submit" />
     </form>
   </div>
@@ -37,7 +38,9 @@
 
 <script>
 import beerService from "@/services/BeerService";
+import Upload from './Upload.vue';
 export default {
+  components: { Upload },
   name: "add-beer",
   data() {
     return {
