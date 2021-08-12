@@ -82,7 +82,7 @@ export default {
 } */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Quattrocento:wght@700&display=swap');
 form {
-  margin-top: 18%;
+  margin-top: 150px;
   border: solid black 1px;
   margin-right: 35%;
   margin-left: 35%;
@@ -92,8 +92,8 @@ form {
   padding-bottom: 4%;
   padding-top: 4%;
   background-color: rgb(224, 222, 222);
-  border-radius: 6%;
-  font-size: 22px;
+  border-radius: 10px;
+  font-size: 25px;
   box-shadow: 5px 10px 18px #888888
 }
 #Pass {

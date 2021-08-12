@@ -111,7 +111,7 @@
   position: fixed;
   top: 0;
   width: 99%;
-  height: 22%;
+  height: 130px;
   background-color: rgb(247, 145, 86);
   color: rgba(16, 16, 77, 0.938);
   text-align: center;

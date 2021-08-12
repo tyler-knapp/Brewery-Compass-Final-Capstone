@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 class="add-title">Add a Beer to Your Brewery</h1>
     <form class="form" @submit.prevent="createBeer">
       <div>
         <label for="name"> Name</label>
@@ -18,7 +19,7 @@
         <input type="text" id="abv" v-model="beer.apv"/>
       </div>
       <div>
-        <label for="ibu">ibu</label>
+        <label for="ibu">IBU</label>
         <input type="text" id="ibu" v-model="beer.ibu"/>
       </div>
       <div>
@@ -57,4 +58,11 @@ export default {
 </script>
 
 <style>
+.add-title{
+  font-size: 55px;
+  text-align: center;
+  margin-top: 155px;
+  margin-bottom: -85px;
+  padding-bottom: -55;
+}
 </style>

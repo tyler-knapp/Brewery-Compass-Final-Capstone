@@ -1,12 +1,15 @@
 <template>
   <div>
     <search-brewery class ="search"/>
+     
     <brewery-list class="brewery-list" />
+    <Map />
     <!-- <beer-card class="beer-card" /> -->
   </div>
 </template>
 
 <script>
+import Map from'@/components/Map'
 import BreweryList from "@/components/BreweryList";
 import SearchBrewery from "../components/SearchBrewery.vue";
 //import BeerCard from '../components/BeerCard'
@@ -19,6 +22,7 @@ export default {
   components: {
     BreweryList,
     SearchBrewery,
+    Map
     // BeerCard
   },
 };
@@ -36,19 +40,14 @@ export default {
   font-family: "Raleway", sans-serif;
 }
 
-.header .router:hover {
-  background: rgb(91, 180, 74);
-  color: black;
-}
-
 .brew-title {
   text-align: center;
   margin-top: 220px;
 }
-
+/* 
 .brewery-list {
   padding-top: 50px;
-}
+} */
 
 .router {
   display: block;
@@ -58,7 +57,4 @@ export default {
   text-decoration: none;
 }
 
-.search{
-  padding-top: 20px;
-}
 </style>
