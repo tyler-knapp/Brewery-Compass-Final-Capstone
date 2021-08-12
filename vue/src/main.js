@@ -3,12 +3,18 @@ import App from './App.vue'
 import router from './router/index'
 import store from './store/index'
 import axios from 'axios'
-import firebase from 'firebase';
-
-
+import firebase from 'firebase'
+import VueGeolocation from 'vue-browser-geolocation'
+import * as VueGoogleMaps from 'vue2-google-maps'
 
 
 Vue.config.productionTip = false
+Vue.use(VueGeolocation)
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyCvKFJnOfFz83uNZRlFGt9DcvEQM-7b7a8'
+  }
+})
 
 axios.defaults.baseURL = process.env.VUE_APP_REMOTE_API;
 

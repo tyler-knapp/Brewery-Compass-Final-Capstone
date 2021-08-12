@@ -1,22 +1,15 @@
 <template>
   <div>
-    <div class="header">
-      <h1 id="title">Brew Hopper</h1>
-      <div class="router">
-        <router-link v-bind:to="{ name: 'home' }">Home</router-link
-        >&nbsp;|&nbsp;
-        <router-link v-bind:to="{ name: 'AddBrewery' }"
-          >Add Brewery</router-link
-        >
-      </div>
-    </div>
     <search-brewery class ="search"/>
+     
     <brewery-list class="brewery-list" />
+    <Map />
     <!-- <beer-card class="beer-card" /> -->
   </div>
 </template>
 
 <script>
+import Map from'@/components/Map'
 import BreweryList from "@/components/BreweryList";
 import SearchBrewery from "../components/SearchBrewery.vue";
 //import BeerCard from '../components/BeerCard'
@@ -29,6 +22,7 @@ export default {
   components: {
     BreweryList,
     SearchBrewery,
+    Map
     // BeerCard
   },
 };
@@ -39,7 +33,6 @@ export default {
 
 .header {
   top: 0;
-  background-color: rgb(113, 224, 191);
   position: fixed;
   font-size: 28px;
   height: 75px;
@@ -47,26 +40,14 @@ export default {
   font-family: "Raleway", sans-serif;
 }
 
-#title{
-  color: white;
-  font-size: 22px;
-  position: fixed;
-
-}
-
-.header .router:hover {
-  background: rgb(91, 180, 74);
-  color: black;
-}
-
 .brew-title {
   text-align: center;
   margin-top: 220px;
 }
-
+/* 
 .brewery-list {
   padding-top: 50px;
-}
+} */
 
 .router {
   display: block;
@@ -76,7 +57,4 @@ export default {
   text-decoration: none;
 }
 
-.search{
-  padding-top: 100px;
-}
 </style>

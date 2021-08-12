@@ -12,7 +12,7 @@
         role="alert"
         v-if="this.$route.query.registration"
       >Thank you for registering, please sign in.</div>
-      <label for="username" class="sr-only">Username</label>
+      <label id="User" for="username" class="sr-only">Username</label>
       <input
         type="text"
         id="username"
@@ -22,7 +22,9 @@
         required
         autofocus
       />
-      <label for="password" class="sr-only">Password</label>
+      <br>
+      <br>
+      <label id="Pass" for="password" class="sr-only">Password</label>
       <input
         type="password"
         id="password"
@@ -31,15 +33,15 @@
         v-model="user.password"
         required
       />
+      <br>
+      <br>
       <router-link :to="{ name: 'register' }">Need an account?</router-link>
       <button type="submit">Sign in</button>
     </form>
   </div>
 </template>
-
 <script>
 import authService from "../services/AuthService";
-
 export default {
   name: "login",
   components: {},
@@ -65,7 +67,6 @@ export default {
         })
         .catch(error => {
           const response = error.response;
-
           if (response.status === 401) {
             this.invalidCredentials = true;
           }
@@ -74,12 +75,31 @@ export default {
   }
 };
 </script>
-
 <style>
-
-label {
+/* label {
   display: flex;
   padding-top: 50px;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Quattrocento:wght@700&display=swap');
+form {
+  margin-top: 150px;
+  border: solid black 1px;
+  margin-right: 35%;
+  margin-left: 35%;
+  font-family: 'Josefin Sans', sans-serif;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 4%;
+  padding-top: 4%;
+  background-color: rgb(224, 222, 222);
+  border-radius: 10px;
+  font-size: 25px;
+  box-shadow: 5px 10px 18px #888888
 }
-
+#Pass {
+  text-align: center;
+}
+#User {
+  text-align: center;
+}
 </style>
