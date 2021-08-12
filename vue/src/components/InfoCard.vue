@@ -21,7 +21,10 @@ export default {
 .link{
     text-decoration: none;
     color: white;
+}
 
+#infocard {
+    background: inherit;
 }
 
 </style>

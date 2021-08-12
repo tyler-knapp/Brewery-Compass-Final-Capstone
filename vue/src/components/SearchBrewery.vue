@@ -13,7 +13,7 @@
         v-for="info in infoDisplay"
         v-bind:key="info.id"
         v-bind:info="info"
-        v-bind:style="{ 'background-color': randomBackgroundColor() }"
+        v-bind:style="{ 'background-color': backgroundColorScheme() }"
       />
     </div>
   </div>
@@ -63,14 +63,26 @@ export default {
           }
         });
     },
-    randomBackgroundColor() {
-      return "#" + this.generateHexCode();
+
+      backgroundColorScheme() {
+      var colorArray = [
+        "rgba(167, 136, 155, 0.795)",
+        "#72a0c1",
+        "rgb(202, 148, 116)",
+        "#f0dcd6",
+      ];
+      this.shuffle(colorArray);
+      return colorArray;
     },
-    generateHexCode() {
-      var bg = Math.floor(Math.random() * 16777215).toString(16);
-      if (bg.length !== 6) bg = this.generateHexCode();
-      return bg;
-    },
+
+    // randomBackgroundColor() {
+    //   return "#" + this.generateHexCode();
+    // },
+    // generateHexCode() {
+    //   var bg = Math.floor(Math.random() * 16777215).toString(16);
+    //   if (bg.length !== 6) bg = this.generateHexCode();
+    //   return bg;
+    // },
   },
 
   // Might make sense using a spread operator (maybe a for loop?) to get all of the objects instead of objects
