@@ -18,10 +18,25 @@ export default {
 </script>
 
 <style>
+     @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+.infoName {
+ /* text-decoration: rgb(72, 77, 72) dotted underline; */
+  font-family: 'Patua One', cursive;
+  font-size: 48px;
+  text-align: center;
+  color: rgba(16, 16, 77, 0.938);
+  text-shadow: 4px 2px #6e9bbb;
+  animation: glowing 1300ms infinite;
+}
+
 .link{
     text-decoration: none;
     color: white;
+}
 
+#infocard {
+    background: inherit;
 }
 
 </style>

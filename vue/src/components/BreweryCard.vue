@@ -28,29 +28,34 @@ export default {
  @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 
 .name{
-  text-decoration: rgb(72, 77, 72) dotted underline;
+ /* text-decoration: rgb(72, 77, 72) dotted underline; */
   font-family: 'Patua One', cursive;
   font-size: 48px;
   text-align: center;
-  text-shadow: 4px 2px rgb(122, 112, 112);
+  color: rgba(16, 16, 77, 0.938);
+  text-shadow: 4px 2px #6e9bbb;
   animation: glowing 1300ms infinite;
 }
 
 .cardimage {
   max-width: 50%;
-  height: auto;
+  height: 300px;
   border-radius: 10px;
-  
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px rgba(16, 16, 77, 0.938) solid;
 }
 
 #breweryCard {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 85px;
   padding: 10px;
-  border: 1px black solid;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
+  border: 4px rgba(16, 16, 77, 0.938) solid;
+  border-radius: 5px 5px;
   cursor: pointer;
+  height: 435px;
 } 
 
 /* rgba(167, 136, 155, 0.795);

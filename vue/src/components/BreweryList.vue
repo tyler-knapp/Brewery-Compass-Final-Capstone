@@ -4,10 +4,9 @@
       v-for="brewery in display"
       v-bind:key="brewery.id"
       v-bind:brewery="brewery"
-      v-bind:style="{ 'background-color':randomBackgroundColor() }"
+      v-bind:style="{ 'background-color': backgroundColorScheme() }"
     />
   </div>
-
 </template>
 
 <script>
@@ -20,13 +19,13 @@ export default {
   },
   data() {
     return {
-      isLoading: true
-    }
+      isLoading: true,
+    };
   },
   computed: {
     display() {
       return this.$store.state.breweries;
-    }
+    },
   },
   methods: {
     getAllBreweries() {
@@ -53,14 +52,26 @@ export default {
           }
         });
     },
-     randomBackgroundColor() {
-       return "#" + this.generateHexCode();
-     },
-     generateHexCode() {
-       var bg = Math.floor(Math.random() * 16777215).toString(16);
-       if (bg.length !== 6) bg = this.generateHexCode();
-       return bg;
-     },
+
+  
+      shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+    },
+
+    backgroundColorScheme() {
+      var colorArray = [
+        "rgba(167, 136, 155, 0.795)",
+        "#72a0c1",
+        "rgb(202, 148, 116)",
+        "#f0dcd6",
+      ];
+      this.shuffle(colorArray);
+      return colorArray;
+    },
+
   },
   created() {
     this.getAllBreweries();
@@ -69,5 +80,4 @@ export default {
 </script>
 
 <style>
-
 </style>
